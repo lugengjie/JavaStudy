@@ -1,4 +1,4 @@
-package collection;
+package 数据结构与容器.ArrayListTest;
 
 import java.util.ArrayList;
 import java.util.List;

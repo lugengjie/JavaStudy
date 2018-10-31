@@ -1,19 +1,19 @@
-package collection;
+package 数据结构与容器.ArrayListTest;
 /**
- * remove()方法
+ * 数组扩容
  * @author jie
  *
  */
-public class Test141<T> {
+public class Test138<T> {
 	private Object[] elementDate;
 	private int size;
 	private static final int DEFALT_CAPACITY=10;
 	
-	public Test141() {
+	public Test138() {
 		elementDate=new Object[DEFALT_CAPACITY];
 	}
 	
-	public Test141(int capacity) {
+	public Test138(int capacity) {
 		elementDate=new Object[capacity];
 	}
 	
@@ -26,18 +26,7 @@ public class Test141<T> {
 		
 		elementDate[size++]=element;
 	}
-	public void remove(int index) {
-		System.arraycopy(elementDate,index+1,elementDate,index,elementDate.length-1-index);
-		elementDate[--size]=null;
-	}
 	
-	public void remove(Object obj) {
-		for(int i=0;i<size;i++) {
-			if(obj.equals(elementDate[i])) {
-				remove(i);
-			}
-		}
-	}
 	@Override
 	public String toString() {
 		StringBuilder sb=new StringBuilder();
@@ -50,13 +39,11 @@ public class Test141<T> {
 	}
 	
 	public static void main(String[] args) {
-		Test141<String> list=new Test141<String>(2);
+		Test138<String> list=new Test138<String>(2);
 		list.add("aa");
 		list.add("bb");
 		list.add("aa");
 		list.add("bb");
-//		list.remove(0);
-		list.remove("bb");
 		System.out.println(list);
 	}
 }

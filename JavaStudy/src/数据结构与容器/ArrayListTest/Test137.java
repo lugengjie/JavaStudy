@@ -1,4 +1,4 @@
-package collection;
+package 数据结构与容器.ArrayListTest;
 /**
  * 手工实现ArrayList,加泛型
  * @author jie
