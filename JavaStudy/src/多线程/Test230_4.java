@@ -1,11 +1,14 @@
 package 多线程;
+
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * 可重入锁：锁可以延续使用
  * @author jie
  *
  */
-public class Test230_3 {
-	ReLock lock=new ReLock();
+public class Test230_4 {
+	ReentrantLock lock=new ReentrantLock();
 	public void a() throws InterruptedException {
 		lock.lock();
 		System.out.println(lock.getHoldCount());
@@ -23,7 +26,7 @@ public class Test230_3 {
 
 	}
 	public static void main(String[] args) throws InterruptedException {
-		Test230_3 test=new Test230_3();
+		Test230_4 test=new Test230_4();
 		test.a();
 //		test.doSomething();
 		Thread.sleep(1000);
@@ -46,40 +49,4 @@ public class Test230_3 {
 		}
 
 	}
-}
-//不可重入锁
-class ReLock{
-	//是否占用
-	private boolean isLocked=false;
-	//存储线程
-	private Thread lockedBy=null; 
-	//计数器
-	private int holdCount=0;
-	//使用锁
-	public synchronized void lock() throws InterruptedException {
-		Thread t=Thread.currentThread();
-		while(isLocked&&lockedBy!=t) {
-			wait();
-		}
-		isLocked=true;
-		lockedBy =t;
-		holdCount++;
-	}
-	//释放锁
-	public synchronized void unlock() {
-		if(Thread.currentThread()==lockedBy) {
-			holdCount--;
-			if(holdCount==0) {
-				isLocked=false;
-				lockedBy=null;
-				notify();
-			}
-			
-		}
-	}
-	public int getHoldCount() {
-		return holdCount;
-	}
-	
-	
 }
