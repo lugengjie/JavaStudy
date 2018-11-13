@@ -13,7 +13,7 @@ import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
 import java.util.Date;
 
-public class Test141_2_service {
+public class Test241_2_service {
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		System.out.println("接收方启动中....");
 		//* 1.使用DatagramSocket指定端口 创建接收端

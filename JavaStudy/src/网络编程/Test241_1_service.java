@@ -11,7 +11,7 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
 
-public class Test141_1_service {
+public class Test241_1_service {
 	public static void main(String[] args) throws IOException {
 		System.out.println("接收方启动中....");
 		//* 1.使用DatagramSocket指定端口 创建接收端

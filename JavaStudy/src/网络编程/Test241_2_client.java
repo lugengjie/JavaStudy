@@ -12,7 +12,7 @@ import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
 import java.util.Date;
 
-public class Test141_2_client {
+public class Test241_2_client {
 	public static void main(String[] args) throws IOException {
 		System.out.println("发送方启动中.....");
 		//* 1.使用DatagramSocket指定端口 创建发送端

@@ -9,7 +9,7 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
 
-public class Test141_1_client {
+public class Test241_1_client {
 	public static void main(String[] args) throws IOException {
 		System.out.println("发送方启动中.....");
 		//* 1.使用DatagramSocket指定端口 创建发送端
