@@ -2,11 +2,11 @@
  <web-app>
  <servlet>
   <servlet-name>login</servlet-name>
-  <servlet-class>com.sxt.server.basic.servlet.LoginServlet</servlet-class>
+  <servlet-class>手写Httpserver项目.Test256.LoginServlet</servlet-class>
  </servlet>
    <servlet>
   <servlet-name>reg</servlet-name>
-  <servlet-class>com.sxt.server.basic.servlet.RegisterServlet</servlet-class>
+  <servlet-class>手写Httpserver项目.Test256.RegisterServlet</servlet-class>
  </servlet>   
  <servlet-mapping>
   <servlet-name>login</servlet-name>

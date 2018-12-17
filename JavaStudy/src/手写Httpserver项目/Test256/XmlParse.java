@@ -1,6 +1,7 @@
-package 手写Httpserver项目.Test255;
+package 手写Httpserver项目.Test256;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,8 +13,11 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import 手写Httpserver项目.Test255.Entity;
+import 手写Httpserver项目.Test255.Mapping;
+
 public class XmlParse {
-	public static void main(String[] args) throws SAXException, IOException, ParserConfigurationException {
+	public static void main(String[] args) throws SAXException, IOException, ParserConfigurationException, ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 		//SAX解析
 		//1、获取解析工厂
 		SAXParserFactory factory=SAXParserFactory.newInstance();
@@ -27,14 +31,14 @@ public class XmlParse {
 		.getResourceAsStream("手写Httpserver项目/Test255/web.xml")
 		,handler);
 		
-		List<Entity> entitys=handler.getEntitys();
-		for(Entity entity:entitys) {
-			System.out.println(entity);
-		}
-		List<Mapping> mappings=handler.getMappings();
-		for(Mapping mapping:mappings) {
-			System.out.println(mapping);
-		}
+		//获取数据
+		WebContext context=new WebContext(handler.getEntitys(), handler.getMappings());
+		
+		//假设你输入了/login
+		String className=context.getClz("/reg");
+		Class clz=Class.forName(className);
+		Servlet servlet=(Servlet)clz.getConstructor().newInstance();
+		System.out.println(servlet);
 	}
 }
 class WebHandler extends DefaultHandler{
