@@ -1,4 +1,4 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,12 +8,12 @@ import java.net.URL;
 import org.apache.commons.io.FileUtils;
 
 /**
- * ´´½¨Ïß³Ì·½·¨¶ş£º
- * 1,´´½¨£ºÊµÏÖRunnable+ÖØĞ´run
- * 2,ÊµÏÖ£º´´½¨ÊµÏÖÀà¶ÔÏó+Thread¶ÔÏó+start
+ * åˆ›å»ºçº¿ç¨‹æ–¹æ³•äºŒï¼š
+ * 1,åˆ›å»ºï¼šå®ç°Runnable+é‡å†™run
+ * 2,å®ç°ï¼šåˆ›å»ºå®ç°ç±»å¯¹è±¡+Threadå¯¹è±¡+start
  * @author jie
- *ÍÆ¼ö£º±ÜÃâjavaµ¥¼Ì³Ğ¾ÖÏŞĞÔ£¬ÓÅÏÈÊ¹ÓÃ½Ó¿Ú
- *·½±ã¹²Ïí×ÊÔ´
+ *æ¨èï¼šé¿å…javaå•ç»§æ‰¿å±€é™æ€§ï¼Œä¼˜å…ˆä½¿ç”¨æ¥å£
+ *æ–¹ä¾¿å…±äº«èµ„æº
  */
 public class Test198 implements Runnable{
 	private String url;
@@ -26,7 +26,7 @@ public class Test198 implements Runnable{
 	@Override
 	public void run() {
 		try {
-			FileUtils.copyURLToFile(new URL(this.url),new File("src/¶àÏß³Ì/"+this.name));
+			FileUtils.copyURLToFile(new URL(this.url),new File("src/å¤šçº¿ç¨‹/"+this.name));
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

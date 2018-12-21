@@ -1,4 +1,4 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.SetTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.SetTest;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,7 +9,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 /**
- * Iteratorµü´úÆ÷±éÀúÈİÆ÷ÔªËØ£¨List/Set/Map)
+ * Iteratorè¿­ä»£å™¨éå†å®¹å™¨å…ƒç´ ï¼ˆList/Set/Map)
  * @author jie
  *
  */

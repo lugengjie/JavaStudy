@@ -1,7 +1,7 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.LinkedListTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.LinkedListTest;
 
 /**
- * LinkedList¼Ó·ºĞÍ
+ * LinkedListåŠ æ³›å‹
  * @author jie
  *
  */
@@ -102,7 +102,7 @@ public class Test146 <T>{
 	}
 	private void checkRange(int index) {
 		if(index<0||index>size-1) {
-			throw new RuntimeException("Ë÷ÒıÔ½½ç£¡");
+			throw new RuntimeException("ç´¢å¼•è¶Šç•Œï¼");
 		}
 
 	}

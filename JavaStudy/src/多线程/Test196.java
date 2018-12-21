@@ -1,25 +1,25 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * ´´½¨Ïß³Ì·½·¨Ò»
- * 1)´´½¨£º¼Ì³ĞThread,ÖØĞ´run()
- * 2)Æô¶¯:´´½¨×ÓÀà¶ÔÏó,start()
+ * åˆ›å»ºçº¿ç¨‹æ–¹æ³•ä¸€
+ * 1)åˆ›å»ºï¼šç»§æ‰¿Thread,é‡å†™run()
+ * 2)å¯åŠ¨:åˆ›å»ºå­ç±»å¯¹è±¡,start()
  * @author jie
  *
  */
 public class Test196 extends Thread{
 	@Override
 	/**
-	 * Ïß³ÌÌåÈë¿Ú
+	 * çº¿ç¨‹ä½“å…¥å£
 	 */
 	public void run() {
 		for(int i=0;i<20;i++) {
-			System.out.println("Ìı¸è");
+			System.out.println("å¬æ­Œ");
 		}
 	}
 	public static void main(String[] args) {
 		Test196 threadTest=new Test196();
 		/**
-		 * ²»±£Ö¤Á¢¼´ÔËĞĞ£¬cpuµ÷ÓÃ
+		 * ä¸ä¿è¯ç«‹å³è¿è¡Œï¼Œcpuè°ƒç”¨
 		 */
 		threadTest.start();
 		

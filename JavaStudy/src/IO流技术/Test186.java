@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.BufferedOutputStream;
 import java.io.FileDescriptor;
@@ -8,7 +8,7 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 
 /**
- * ´òÓ¡Á÷
+ * æ‰“å°æµ
  * PrintStream
  * PrintWriter
  * @author jie
@@ -17,16 +17,16 @@ import java.io.PrintStream;
 public class Test186 {
 	public static void main(String[] args) throws FileNotFoundException {
 		PrintStream ps=System.out;
-		ps.print("ÄãºÃ");
+		ps.print("ä½ å¥½");
 		
-		ps=new PrintStream(new BufferedOutputStream(new FileOutputStream("src/IOÁ÷¼¼Êõ/printStream.txt")),true);
-		ps.print("½ñÌìÌìÆøºÃºÃ°¡");
+		ps=new PrintStream(new BufferedOutputStream(new FileOutputStream("src/IOæµæŠ€æœ¯/printStream.txt")),true);
+		ps.print("ä»Šå¤©å¤©æ°”å¥½å¥½å•Š");
 		
-		//ÖØ¶¨ÏòÊä³ö¶Ë
+		//é‡å®šå‘è¾“å‡ºç«¯
 		System.setOut(ps);
 		System.out.println("change");
 		ps.close();
-		//ÖØ¶¨Ïò»Ø¿ØÖÆÌ¨
+		//é‡å®šå‘å›æ§åˆ¶å°
 		System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
 		System.out.println("I am back");
 		

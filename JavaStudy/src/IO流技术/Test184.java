@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -9,9 +9,9 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 
 /**
- * Êı¾İÁ÷
- * Ğ´³öºó¶ÁÈ¡
- * ¶Á³öË³ĞòÓëĞ´³öË³ĞòÒ»ÖÂ
+ * æ•°æ®æµ
+ * å†™å‡ºåè¯»å–
+ * è¯»å‡ºé¡ºåºä¸å†™å‡ºé¡ºåºä¸€è‡´
  * DataOutputStream()
  * DataInputStream()
  * @author jie
@@ -22,10 +22,10 @@ public class Test184 {
 		ByteArrayOutputStream baos=new ByteArrayOutputStream();
 		DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(baos));
 		try {
-			dos.writeUTF("ÎÒ°®Äã");
+			dos.writeUTF("æˆ‘çˆ±ä½ ");
 			dos.writeByte(1);
 			dos.writeChar('a');
-			//¼ÇµÃÇ¿ÖÆË¢ĞÂ
+			//è®°å¾—å¼ºåˆ¶åˆ·æ–°
 			dos.flush();
 			byte[] datas=baos.toByteArray();
 			ByteArrayInputStream bais=new ByteArrayInputStream(datas);

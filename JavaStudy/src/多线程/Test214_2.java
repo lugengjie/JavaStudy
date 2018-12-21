@@ -1,17 +1,17 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 
 import java.util.Date;
 
 /**
- * Ïß³Ì°²È«£º²¢·¢Ê±±£Ö¤Êı¾İµÄÕıÈ·ĞÔ£¬Ğ§ÂÊ¾¡¿ÉÄÜ¸ß
+ * çº¿ç¨‹å®‰å…¨ï¼šå¹¶å‘æ—¶ä¿è¯æ•°æ®çš„æ­£ç¡®æ€§ï¼Œæ•ˆç‡å°½å¯èƒ½é«˜
  * @author jie
  *synchronized
- *1.Í¬²½·½·¨
- *2.Í¬²½¿é:Ä¿±ê¸üÃ÷È·
+ *1.åŒæ­¥æ–¹æ³•
+ *2.åŒæ­¥å—:ç›®æ ‡æ›´æ˜ç¡®
  */
 public class Test214_2 {
 	public static void main(String[] args) {
-		Account account=new Account("½á»éÀñ½ğ", 1000);
+		Account account=new Account("ç»“å©šç¤¼é‡‘", 1000);
 		Drawing you=new Drawing(account,80, "ME");
 		Drawing wife=new Drawing(account,90, "WIFE");
 		you.start();
@@ -63,8 +63,8 @@ class Drawing extends Thread{
 			}
 			account.money-=drawingMoney;
 			pocketTotal+=drawingMoney;
-			System.out.println(this.getName()+"-->ÕË»§Óà¶î£º"+account.money);
-			System.out.println(this.getName()+"-->¿Ú´üµÄÇ®£º"+pocketTotal);
+			System.out.println(this.getName()+"-->è´¦æˆ·ä½™é¢ï¼š"+account.money);
+			System.out.println(this.getName()+"-->å£è¢‹çš„é’±ï¼š"+pocketTotal);
 		}
 	}
 	

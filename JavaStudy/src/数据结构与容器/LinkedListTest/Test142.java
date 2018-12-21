@@ -1,6 +1,6 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.LinkedListTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.LinkedListTest;
 /**
- * ÊµÏÖLinkedListµÄadd()·½·¨
+ * å®ç°LinkedListçš„add()æ–¹æ³•
  * @author jie
  *
  */

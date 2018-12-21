@@ -1,4 +1,4 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.ArrayListTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.ArrayListTest;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ArrayListTest {
 	/**
-	  * ²âÊÔÁ½¸ö¼¯ºÏ¼äµÄ²Ù×÷
+	  * æµ‹è¯•ä¸¤ä¸ªé›†åˆé—´çš„æ“ä½œ
 	  * addAll()
 	  * removeAll()
 	  * retainAll()

@@ -1,4 +1,4 @@
-package ÍøÂç±à³Ì;
+package ç½‘ç»œç¼–ç¨‹;
 
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayInputStream;
@@ -14,17 +14,17 @@ import java.util.Date;
 
 public class Test241_2_client {
 	public static void main(String[] args) throws IOException {
-		System.out.println("·¢ËÍ·½Æô¶¯ÖĞ.....");
-		//* 1.Ê¹ÓÃDatagramSocketÖ¸¶¨¶Ë¿Ú ´´½¨·¢ËÍ¶Ë
+		System.out.println("å‘é€æ–¹å¯åŠ¨ä¸­.....");
+		//* 1.ä½¿ç”¨DatagramSocketæŒ‡å®šç«¯å£ åˆ›å»ºå‘é€ç«¯
 		DatagramSocket client=new DatagramSocket(8888);
-		//* 2.×¼±¸Êı¾İ,Ò»¶¨Òª×ª³É×Ö½ÚÊı×é
-		//Ğ´³ö
-		byte[] datas=IOUtils.fileToByteArray("src/ÍøÂç±à³Ì/logo.png");
-		//* 3.·â×°³ÉDatagramPacket°ü¹ü,ĞèÒªÖ¸¶¨Ä¿µÄµØ
+		//* 2.å‡†å¤‡æ•°æ®,ä¸€å®šè¦è½¬æˆå­—èŠ‚æ•°ç»„
+		//å†™å‡º
+		byte[] datas=IOUtils.fileToByteArray("src/ç½‘ç»œç¼–ç¨‹/logo.png");
+		//* 3.å°è£…æˆDatagramPacketåŒ…è£¹,éœ€è¦æŒ‡å®šç›®çš„åœ°
 		DatagramPacket packet=new DatagramPacket(datas, 0,datas.length,new InetSocketAddress("localhost",9999));
-		//* 4.·¢ËÍ°ü¹üsend(DatagramPacket p)
+		//* 4.å‘é€åŒ…è£¹send(DatagramPacket p)
 		client.send(packet);
-		//* 5.ÊÍ·Å×ÊÔ´
+		//* 5.é‡Šæ”¾èµ„æº
 		client.close();
 	}
 }

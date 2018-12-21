@@ -1,6 +1,6 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * Ğ­×÷Ä£ĞÍ£ºÏû·ÑÕßÉú²úÕß ÊµÏÖ·½·¨¶ş£ºĞÅºÅµÆ
+ * åä½œæ¨¡å‹ï¼šæ¶ˆè´¹è€…ç”Ÿäº§è€… å®ç°æ–¹æ³•äºŒï¼šä¿¡å·ç¯
  * @author jie
  *
  */
@@ -13,7 +13,7 @@ public class Test213 {
 		watcher.start();
 	}
 }
-//Éú²úÕß ÑİÔ±
+//ç”Ÿäº§è€… æ¼”å‘˜
 class Player extends Thread{
 	Tv tv;
 	public Player(Tv tv) {
@@ -22,7 +22,7 @@ class Player extends Thread{
 	@Override
 	public void run() {
 		for(int i=0;i<20;i++)
-			this.tv.play("ÆæİâËµ");
+			this.tv.play("å¥‡è‘©è¯´");
 	}
 }
 class Watcher extends Thread{
@@ -42,14 +42,14 @@ class Watcher extends Thread{
 }
 class Tv{
 	String voice;
-	//ĞÅºÅµÆ
-	//true±íÊ¾ÑİÔ±±íÑİ£¬¹ÛÖÚµÈ´ı
-	//false±íÊ¾¹ÛÖÚµÈ´ı ÑİÔ±±íÑİ
+	//ä¿¡å·ç¯
+	//trueè¡¨ç¤ºæ¼”å‘˜è¡¨æ¼”ï¼Œè§‚ä¼—ç­‰å¾…
+	//falseè¡¨ç¤ºè§‚ä¼—ç­‰å¾… æ¼”å‘˜è¡¨æ¼”
 	boolean flag=true;
 	
-	//±íÑİ
+	//è¡¨æ¼”
 	public synchronized void play(String voice) {
-		//ÑİÔ±µÈ´ı
+		//æ¼”å‘˜ç­‰å¾…
 		if(!flag) {
 			try {
 				wait();
@@ -57,17 +57,17 @@ class Tv{
 				e.printStackTrace();
 			}
 		}
-		//±íÑİ
-		System.out.println("±íÑİÁË"+voice);
+		//è¡¨æ¼”
+		System.out.println("è¡¨æ¼”äº†"+voice);
 		this.voice=voice;
-		//»½ĞÑ
+		//å”¤é†’
 		this.notifyAll();
-		//ÇĞ»»±êÖ¾
+		//åˆ‡æ¢æ ‡å¿—
 		this.flag=!this.flag;
 	}
-	//¹Û¿´
+	//è§‚çœ‹
 	public synchronized void watch() {
-		//¹ÛÖÚµÈ´ı
+		//è§‚ä¼—ç­‰å¾…
 		if(flag) {
 			try {
 				wait();
@@ -75,11 +75,11 @@ class Tv{
 				e.printStackTrace();
 			}
 		}
-		//¹Û¿´
-		System.out.println("¹Û¿´ÁË"+voice);
-		//»½ĞÑ
+		//è§‚çœ‹
+		System.out.println("è§‚çœ‹äº†"+voice);
+		//å”¤é†’
 		this.notifyAll();
-		//ÇĞ»»±êÖ¾
+		//åˆ‡æ¢æ ‡å¿—
 		this.flag=!this.flag;
 	}
 	

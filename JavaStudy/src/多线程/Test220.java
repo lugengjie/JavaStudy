@@ -1,25 +1,25 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * ËÀËø£º¹ı¶àµÄÍ¬²½¿ÉÄÜÔì³ÉÏà»¥²»ÊÍ·Å×ÊÔ´
- * ´Ó¶øÔì³ÉÏà»¥µÈ´ı£¬Ò»°ã·¢ÉúÓÚÍ¬²½ÖĞ³ÖÓĞ¶à¸öËø
+ * æ­»é”ï¼šè¿‡å¤šçš„åŒæ­¥å¯èƒ½é€ æˆç›¸äº’ä¸é‡Šæ”¾èµ„æº
+ * ä»è€Œé€ æˆç›¸äº’ç­‰å¾…ï¼Œä¸€èˆ¬å‘ç”ŸäºåŒæ­¥ä¸­æŒæœ‰å¤šä¸ªé”
  * 
- * ±ÜÃâ£º²»ÒªÔÚÒ»¸ö´úÂë¿éÖĞÍ¬Ê±³ÖÓĞ¶à¸ö¶ÔÏóµÄËø
+ * é¿å…ï¼šä¸è¦åœ¨ä¸€ä¸ªä»£ç å—ä¸­åŒæ—¶æŒæœ‰å¤šä¸ªå¯¹è±¡çš„é”
  * @author jie
  *
  */
 public class Test220 {
 	public static void main(String[] args) {
-		Markup g1=new Markup(1, "·ç");
-		Markup g2=new Markup(2, "Ñ©");
+		Markup g1=new Markup(1, "é£");
+		Markup g2=new Markup(2, "é›ª");
 		g1.start();
 		g2.start();
 	}
 }
-//¿Úºì
+//å£çº¢
 class Lipstick{
 	
 }
-//¾µ×Ó
+//é•œå­
 class Mirror{
 	
 }
@@ -45,36 +45,36 @@ class Markup extends Thread{
 	private void markup() {
 		if(choice==1) {
 			synchronized (lipstick) {
-				System.out.println(this.girl+"Í¿¿Úºì");
+				System.out.println(this.girl+"æ¶‚å£çº¢");
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 //				synchronized (mirror) {
-//					System.out.println(this.girl+"ÕÕ¾µ×Ó");
+//					System.out.println(this.girl+"ç…§é•œå­");
 //					
 //				}
 			}
 			synchronized (mirror) {
-				System.out.println(this.girl+"ÕÕ¾µ×Ó");
+				System.out.println(this.girl+"ç…§é•œå­");
 				
 			}
 		}else {
 			synchronized (mirror) {
-				System.out.println(this.girl+"ÕÕ¾µ×Ó");
+				System.out.println(this.girl+"ç…§é•œå­");
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 //				synchronized (lipstick) {
-//					System.out.println(this.girl+"Í¿¿Úºì");
+//					System.out.println(this.girl+"æ¶‚å£çº¢");
 //					
 //				}
 			}
 			synchronized (lipstick) {
-				System.out.println(this.girl+"Í¿¿Úºì");
+				System.out.println(this.girl+"æ¶‚å£çº¢");
 				
 			}
 		}

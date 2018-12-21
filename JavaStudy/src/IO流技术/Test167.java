@@ -1,8 +1,8 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.File;
 /**
- * Ãû³Æ·Ö¸ô·û
+ * åç§°åˆ†éš”ç¬¦
  * @author jie
  *
  */
@@ -13,19 +13,19 @@ public class Test167 {
 		file_path();
 		
 	}
-	//Ãû³Æ·Ö¸ô·û
+	//åç§°åˆ†éš”ç¬¦
 	private static void _path(){
 		String path="C:\\Users\\jie\\git\\JavaStudy\\JavaStudy\\src\\03.jpeg";
 		System.out.println(File.separatorChar);
-		//½¨Òé£¬¿É¿çÆ½Ì¨
+		//å»ºè®®ï¼Œå¯è·¨å¹³å°
 		//1,/
 		path="C:/Users/jie/git/JavaStudy/JavaStudy/src/03.jpeg";
 		System.out.println(path);
-		//2,³£Á¿Æ´½Ó
+		//2,å¸¸é‡æ‹¼æ¥
 		path="C:"+File.separator+"Users"+File.separator+"jie"+File.separator+"git"+File.separator+"JavaStudy"+File.separator+"JavaStudy"+File.separator+"src"+File.separator+"03.jpeg";
 		System.out.println(path);
 	}
-	//¹¹½¨File¶ÔÏó
+	//æ„å»ºFileå¯¹è±¡
 	private static void _file() {
 		File src=new File("C:/Users/jie/git/JavaStudy/JavaStudy/src/03.jpeg");
 		src=new File("C:/Users/jie/git","/JavaStudy/JavaStudy/src/03.jpeg");
@@ -36,16 +36,16 @@ public class Test167 {
 	
 	private static void file_path() {
 		String path="C:/Users/jie/git/JavaStudy/JavaStudy/src/03.jpeg";
-		//¾ø¶ÔÂ·¾¶
+		//ç»å¯¹è·¯å¾„
 		File file=new File(path);
 		System.out.println(file.getAbsolutePath());
 		
-		//Ïà¶ÔÂ·¾¶
+		//ç›¸å¯¹è·¯å¾„
 		System.out.println(System.getProperty("user.dir"));
 		file=new File("03.jpeg");
 		System.out.println(file.getAbsolutePath());
 		
-		//¹¹½¨Ò»¸ö²»´æÔÚµÄÎÄ¼ş
+		//æ„å»ºä¸€ä¸ªä¸å­˜åœ¨çš„æ–‡ä»¶
 		File file01=new File("04.jpeg");
 		System.out.println(file01.getAbsolutePath());
 

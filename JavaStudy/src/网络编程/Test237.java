@@ -1,14 +1,14 @@
-package ÍøÂç±à³Ì;
+package ç½‘ç»œç¼–ç¨‹;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
- * URL,Í³Ò»×ÊÔ´¶¨Î»Æ÷£¬»¥ÁªÍøÈı´ó»ùÊ¯Ö®Ò»(html,url),Çø·Ö×ÊÔ´
- * 1.Ğ­Òé
- * 2.ÓòÃû,ip
- * 3.¶Ë¿Ú,Ä¬ÈÏ80
- * 4.ÇëÇó×ÊÔ´
+ * URL,ç»Ÿä¸€èµ„æºå®šä½å™¨ï¼Œäº’è”ç½‘ä¸‰å¤§åŸºçŸ³ä¹‹ä¸€(html,url),åŒºåˆ†èµ„æº
+ * 1.åè®®
+ * 2.åŸŸå,ip
+ * 3.ç«¯å£,é»˜è®¤80
+ * 4.è¯·æ±‚èµ„æº
  * http://www.baidu.com:80/index.html?uname=shsxt&age=18#a
  * @author jie
  *
@@ -16,16 +16,16 @@ import java.net.URL;
 public class Test237 {
 	public static void main(String[] args) throws MalformedURLException {
 		URL url=new URL("http://www.baidu.com:80/index.html?uname=shsxt&age=18#a");
-		//»ñÈ¡ËÄ¸öÖµ
-		System.out.println("Ğ­Òé"+url.getProtocol());
-		System.out.println("ÓòÃû|IP"+url.getHost());
-		System.out.println("¶Ë¿Ú"+url.getPort());
-		System.out.println("ÇëÇó×ÊÔ´"+url.getFile());
-		System.out.println("ÇëÇó×ÊÔ´"+url.getPath());
+		//è·å–å››ä¸ªå€¼
+		System.out.println("åè®®"+url.getProtocol());
+		System.out.println("åŸŸå|IP"+url.getHost());
+		System.out.println("ç«¯å£"+url.getPort());
+		System.out.println("è¯·æ±‚èµ„æº"+url.getFile());
+		System.out.println("è¯·æ±‚èµ„æº"+url.getPath());
 		
-		//²ÎÊı
-		System.out.println("²ÎÊı£º"+url.getQuery());
-		//Ãªµã
-		System.out.println("Ãªµã£º"+url.getRef());
+		//å‚æ•°
+		System.out.println("å‚æ•°ï¼š"+url.getQuery());
+		//é”šç‚¹
+		System.out.println("é”šç‚¹ï¼š"+url.getRef());
 	}
 }

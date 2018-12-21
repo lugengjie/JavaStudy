@@ -1,6 +1,6 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * ²»¿ÉÖØÈëËø£ºËø²»¿ÉÒÔÑÓĞøÊ¹ÓÃ
+ * ä¸å¯é‡å…¥é”ï¼šé”ä¸å¯ä»¥å»¶ç»­ä½¿ç”¨
  * @author jie
  *
  */
@@ -24,10 +24,10 @@ public class Test230_2 {
 //		test.doSomething();
 	}
 	public void test() {
-		// µÚÒ»´Î»ñÈ¡Ëø
+		// ç¬¬ä¸€æ¬¡è·å–é”
 		synchronized(this) {
 			while(true) {
-				//µÚ¶ş´Î»ñÈ¡Ëø
+				//ç¬¬äºŒæ¬¡è·å–é”
 				synchronized (this) {
 					System.out.println("ReentrantLock");
 				}
@@ -41,18 +41,18 @@ public class Test230_2 {
 
 	}
 }
-//²»¿ÉÖØÈëËø
+//ä¸å¯é‡å…¥é”
 class Lock{
-	//ÊÇ·ñÕ¼ÓÃ
+	//æ˜¯å¦å ç”¨
 	private boolean isLocked=false;
-	//Ê¹ÓÃËø
+	//ä½¿ç”¨é”
 	public synchronized void lock() throws InterruptedException {
 		while(isLocked) {
 			wait();
 		}
 		isLocked=true;
 	}
-	//ÊÍ·ÅËø
+	//é‡Šæ”¾é”
 	public synchronized void unlock() {
 		isLocked=false;
 		notify();

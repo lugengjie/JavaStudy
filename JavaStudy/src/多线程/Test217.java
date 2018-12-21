@@ -1,6 +1,6 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * ¿ªĞÄÓ°Ôº 
+ * å¼€å¿ƒå½±é™¢ 
  */
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ public class Test217 {
 		available.add(5);
 		available.add(6);
 		
-		Cinema cinema=new Cinema(available,"¿ªĞÄÓ°Ôº");
+		Cinema cinema=new Cinema(available,"å¼€å¿ƒå½±é™¢");
 		List sizes1=new ArrayList<Integer>();
 		sizes1.add(1);
 		sizes1.add(2);
@@ -42,9 +42,9 @@ class Customer implements Runnable{
 		synchronized(cinema){
 			boolean flag=cinema.bookTickets(sizes);
 			if(flag) {
-				System.out.println(Thread.currentThread().getName()+"-->³öÆ±³É¹¦£º"+sizes);
+				System.out.println(Thread.currentThread().getName()+"-->å‡ºç¥¨æˆåŠŸï¼š"+sizes);
 			}else {
-				System.out.println(Thread.currentThread().getName()+"-->³öÆ±Ê§°Ü");
+				System.out.println(Thread.currentThread().getName()+"-->å‡ºç¥¨å¤±è´¥");
 			}
 		}
 	}
@@ -59,7 +59,7 @@ class Cinema{
 		this.name = name;
 	}
 	public boolean bookTickets(List<Integer> sizes) {
-		System.out.println("µ±Ç°¿ÉÓÃÎ»ÖÃ£º"+available);
+		System.out.println("å½“å‰å¯ç”¨ä½ç½®ï¼š"+available);
 		List<Integer> copy=new ArrayList<Integer>();
 		copy.addAll(available);
 		copy.removeAll(sizes);

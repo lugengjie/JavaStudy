@@ -1,4 +1,4 @@
-package ÍøÂç±à³Ì.Test244;
+package ç½‘ç»œç¼–ç¨‹.Test244;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -8,11 +8,11 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 /**
- * Ä£ÄâµÇÂ½  µ¥Ïò
- * ´´½¨¿Í»§¶Ë
- * 1.½¨Á¢Á¬½Ó£ºÊ¹ÓÃSocket´´½¨¿Í»§¶Ë+·şÎñÆ÷µÄµØÖ·ºÍ¶Ë¿Ú
- * 2.²Ù×÷£ºÊäÈëÊä³ö²Ù×÷
- * 3.ÊÍ·Å×ÊÔ´
+ * æ¨¡æ‹Ÿç™»é™†  å•å‘
+ * åˆ›å»ºå®¢æˆ·ç«¯
+ * 1.å»ºç«‹è¿æ¥ï¼šä½¿ç”¨Socketåˆ›å»ºå®¢æˆ·ç«¯+æœåŠ¡å™¨çš„åœ°å€å’Œç«¯å£
+ * 2.æ“ä½œï¼šè¾“å…¥è¾“å‡ºæ“ä½œ
+ * 3.é‡Šæ”¾èµ„æº
  * @author jie
  *
  */
@@ -20,17 +20,17 @@ public class LoginClient {
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		System.out.println("----Client----");
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("ÇëÊäÈëÓÃ»§Ãû:");
+		System.out.println("è¯·è¾“å…¥ç”¨æˆ·å:");
 		String uname=br.readLine();
-		System.out.println("ÇëÊäÈëÃÜÂë:");
+		System.out.println("è¯·è¾“å…¥å¯†ç :");
 		String upw=br.readLine();
-		// * 1.½¨Á¢Á¬½Ó£ºÊ¹ÓÃSocket´´½¨¿Í»§¶Ë+·şÎñÆ÷µÄµØÖ·ºÍ¶Ë¿Ú
+		// * 1.å»ºç«‹è¿æ¥ï¼šä½¿ç”¨Socketåˆ›å»ºå®¢æˆ·ç«¯+æœåŠ¡å™¨çš„åœ°å€å’Œç«¯å£
 		Socket client=new Socket("localhost",8888);
-		// * 2.²Ù×÷£ºÊäÈëÊä³ö²Ù×÷
+		// * 2.æ“ä½œï¼šè¾“å…¥è¾“å‡ºæ“ä½œ
 		DataOutputStream dos=new DataOutputStream(client.getOutputStream());
 		dos.writeUTF("uname="+uname+"&"+"upw="+upw);
 		dos.flush();
-		// * 3.ÊÍ·Å×ÊÔ´
+		// * 3.é‡Šæ”¾èµ„æº
 		dos.close();
 		client.close();
 	}

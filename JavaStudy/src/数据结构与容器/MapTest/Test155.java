@@ -1,6 +1,6 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.MapTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.MapTest;
 /**
- * ÖØĞ´toString·½·¨´òÓ¡MapÄÚÈİ
+ * é‡å†™toStringæ–¹æ³•æ‰“å°Mapå†…å®¹
  * @author jie
  *
  */
@@ -52,9 +52,9 @@ public class Test155 {
 		size++;
 	}
 	private int hash(int v,int length) {
-		//È¡Ä£ÔËËã
+		//å–æ¨¡è¿ç®—
 //		System.out.println("hash:"+(v%length));
-		//Î»ÔËËã£¬Ğ§ÂÊ¸ß
+		//ä½è¿ç®—ï¼Œæ•ˆç‡é«˜
 		//System.out.println("hash:"+(v&(length-1)));
 		return v&(length-1);
 	}
@@ -66,7 +66,7 @@ public class Test155 {
 		map.put("30","cc");
 		System.out.println(map);
 //		for(int i=0;i<100;i++) {
-//			System.out.print(i+"µÄhash:");
+//			System.out.print(i+"çš„hash:");
 //			map.put(i+"","test");
 //		}
 //		4 15 26

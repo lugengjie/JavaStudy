@@ -1,15 +1,15 @@
-package ÍøÂç±à³Ì.Test247;
+package ç½‘ç»œç¼–ç¨‹.Test247;
 
 import java.io.Closeable;
 import java.io.IOException;
 /**
- * ¹¤¾ßÀà
+ * å·¥å…·ç±»
  * @author jie
  *
  */
 public class Utils {
 	/**
-	 * ÊÍ·Å×ÊÔ´
+	 * é‡Šæ”¾èµ„æº
 	 * @param targets
 	 */
 	public static void close(Closeable... targets) {

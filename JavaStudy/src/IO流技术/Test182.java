@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -12,13 +12,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 /**
- * ×Ö·û»º³åÁ÷
+ * å­—ç¬¦ç¼“å†²æµ
  * @author jie
  *
  */
 public class Test182 {
 	public static void main(String[] args) {	
-		copy("src/IOÁ÷¼¼Êõ/test.txt","src/IOÁ÷¼¼Êõ/test1.txt");
+		copy("src/IOæµæŠ€æœ¯/test.txt","src/IOæµæŠ€æœ¯/test1.txt");
 	
 	}
 	

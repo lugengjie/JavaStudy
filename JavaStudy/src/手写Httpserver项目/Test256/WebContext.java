@@ -1,11 +1,11 @@
-package 手写Httpserver项目.Test256;
+package 鎵嬪啓Httpserver椤圭洰.Test256;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import 手写Httpserver项目.Test255.Entity;
-import 手写Httpserver项目.Test255.Mapping;
+import 鎵嬪啓Httpserver椤圭洰.Test255.Entity;
+import 鎵嬪啓Httpserver椤圭洰.Test255.Mapping;
 
 public class WebContext {
 	private List<Entity> entitys=null;
@@ -17,11 +17,11 @@ public class WebContext {
 	public WebContext(List<Entity> entitys, List<Mapping> mappings) {
 		this.entitys = entitys;
 		this.mappings = mappings;
-		//将entity的List转为对应的map
+		//灏唀ntity鐨凩ist杞负瀵瑰簲鐨刴ap
 		for(Entity entity:entitys) {
 			entityMap.put(entity.getName(),entity.getClz());
 		}
-		//将mapping的List转为对应的map
+		//灏唌apping鐨凩ist杞负瀵瑰簲鐨刴ap
 		for(Mapping mapping:mappings) {
 			for(String pattern:mapping.getPatterns())
 				mappingMap.put(pattern,mapping.getName());
@@ -45,7 +45,7 @@ public class WebContext {
 	}
 
 	/**
-	 * 通过url路径找到对应的class
+	 * 閫氳繃url璺緞鎵惧埌瀵瑰簲鐨刢lass
 	 * @param pattern
 	 * @return 
 	 */

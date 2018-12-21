@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.File;
 
@@ -20,7 +20,7 @@ class DoFile{
 	
 
 	/**
-	 * ¼ÆËãÎÄ¼ş´óĞ¡£¬ÎÄ¼ş¸öÊı£¬ÎÄ¼ş¼Ğ¸öÊı
+	 * è®¡ç®—æ–‡ä»¶å¤§å°ï¼Œæ–‡ä»¶ä¸ªæ•°ï¼Œæ–‡ä»¶å¤¹ä¸ªæ•°
 	 */
 	public void doFile(File file) {
 		if(null==file||!file.exists()) {
@@ -36,16 +36,16 @@ class DoFile{
 		}
 	}
 	/**
-	 * ´òÓ¡ÎÄ¼ş´óĞ¡£¬ÎÄ¼ş¸öÊı£¬ÎÄ¼ş¼Ğ¸öÊı
+	 * æ‰“å°æ–‡ä»¶å¤§å°ï¼Œæ–‡ä»¶ä¸ªæ•°ï¼Œæ–‡ä»¶å¤¹ä¸ªæ•°
 	 */
 	public void printFile1(File file) {
 		doFile(file);
-		System.out.println("ÎÄ¼ş´óĞ¡:"+length);
-		System.out.println("ÎÄ¼ş¸öÊı"+fileNum);
-		System.out.println("ÎÄ¼ş¼Ğ¸öÊı"+dirNum);
+		System.out.println("æ–‡ä»¶å¤§å°:"+length);
+		System.out.println("æ–‡ä»¶ä¸ªæ•°"+fileNum);
+		System.out.println("æ–‡ä»¶å¤¹ä¸ªæ•°"+dirNum);
 	}
 	/**
-	 * µİ¹é´òÓ¡×ÓËï¼¶Ä¿Â¼ºÍÎÄ¼şÃû
+	 * é€’å½’æ‰“å°å­å­™çº§ç›®å½•å’Œæ–‡ä»¶å
 	 */
 	public static void printFile2(File file,int deep) {
 		for(int i=0;i<deep;i++) {

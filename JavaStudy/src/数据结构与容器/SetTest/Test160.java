@@ -1,4 +1,4 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.SetTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.SetTest;
 
 import java.util.Set;
 import java.util.TreeSet;
@@ -7,7 +7,7 @@ import java.util.TreeSet;
 
 
 /**
- * TreeSetµÄÊ¹ÓÃ
+ * TreeSetçš„ä½¿ç”¨
  * @author jie
  *
  */
@@ -17,7 +17,7 @@ public class Test160 {
 //		set.add(9);
 //		set.add(5);
 //		set.add(4);
-//		//µİÔöÅÅĞò
+//		//é€’å¢æ’åº
 //		for(Integer i:set) {
 //			System.out.println(i);
 //		}

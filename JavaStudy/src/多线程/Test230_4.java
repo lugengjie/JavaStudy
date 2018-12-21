@@ -1,9 +1,9 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * ¿ÉÖØÈëËø£ºËø¿ÉÒÔÑÓĞøÊ¹ÓÃ
+ * å¯é‡å…¥é”ï¼šé”å¯ä»¥å»¶ç»­ä½¿ç”¨
  * @author jie
  *
  */
@@ -33,10 +33,10 @@ public class Test230_4 {
 		System.out.println(test.lock.getHoldCount());
 	}
 	public void test() {
-		// µÚÒ»´Î»ñÈ¡Ëø
+		// ç¬¬ä¸€æ¬¡è·å–é”
 		synchronized(this) {
 			while(true) {
-				//µÚ¶ş´Î»ñÈ¡Ëø
+				//ç¬¬äºŒæ¬¡è·å–é”
 				synchronized (this) {
 					System.out.println("ReentrantLock");
 				}

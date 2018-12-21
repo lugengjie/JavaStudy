@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,7 +7,7 @@ import java.io.RandomAccessFile;
 
 /**
  * RandomAccessFile
- * Ëæ»úÁ÷
+ * éšæœºæµ
  * @author jie
  *
  */
@@ -19,11 +19,11 @@ public class Test187 {
 	}
 	
 	/**
-	 * Ö¸¶¨ Ëæ»úÎ»ÖÃ¶ÁÈ¡Ê£ÓàËùÓĞÄÚÈİ
+	 * æŒ‡å®š éšæœºä½ç½®è¯»å–å‰©ä½™æ‰€æœ‰å†…å®¹
 	 * @throws IOException 
 	 */
 	private static void demo1() throws IOException {
-		RandomAccessFile raf=new RandomAccessFile("src/IOÁ÷¼¼Êõ/Test186.java","r");
+		RandomAccessFile raf=new RandomAccessFile("src/IOæµæŠ€æœ¯/Test186.java","r");
 		raf.seek(2);
 		int len=-1;
 		byte[] flush=new byte[1024];
@@ -32,11 +32,11 @@ public class Test187 {
 		}
 	}
 	/**
-	 * ·Ö¿ªË¼Ïë£¬ÆğÊ¼£¬Êµ¼Ê´óĞ¡
+	 * åˆ†å¼€æ€æƒ³ï¼Œèµ·å§‹ï¼Œå®é™…å¤§å°
 	 * @throws IOException
 	 */
 	private static void demo2() throws IOException {
-		RandomAccessFile raf=new RandomAccessFile("src/IOÁ÷¼¼Êõ/Test186.java","r");
+		RandomAccessFile raf=new RandomAccessFile("src/IOæµæŠ€æœ¯/Test186.java","r");
 		int beginPos=2;
 		int actualSize=1026;
 		raf.seek(beginPos);
@@ -54,14 +54,14 @@ public class Test187 {
 		}
 	}
 	private static void demo3() {
-		File file=new File("src/IOÁ÷¼¼Êõ/Test186.java");
-		//×Ü³¤¶È
+		File file=new File("src/IOæµæŠ€æœ¯/Test186.java");
+		//æ€»é•¿åº¦
 		long len=file.length();
-		//Ã¿¿é´óĞ¡
+		//æ¯å—å¤§å°
 		int blockSize=1024;
-		//¶àÉÙ¿é
+		//å¤šå°‘å—
 		int num=(int) Math.ceil(len*1.0/blockSize);
-		//¿ªÊ¼Î»ÖÃ
+		//å¼€å§‹ä½ç½®
 		int beginPos=0;
 		
 		int actualSize=0;
@@ -74,7 +74,7 @@ public class Test187 {
 				actualSize=blockSize;
 				len-=actualSize;
 			}
-			System.out.println("µÚ"+i+"¿é,¿ªÊ¼Î»ÖÃ:"+beginPos+"¿é´óĞ¡:"+actualSize);
+			System.out.println("ç¬¬"+i+"å—,å¼€å§‹ä½ç½®:"+beginPos+"å—å¤§å°:"+actualSize);
 		}
 		
 	}

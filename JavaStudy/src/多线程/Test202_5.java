@@ -1,13 +1,13 @@
-package ¶àÏß³Ì;
-//lambdaÍÆµ¼+¼Ó²ÎÊý+¼Ó·µÖµ
+package å¤šçº¿ç¨‹;
+//lambdaæŽ¨å¯¼+åŠ å‚æ•°+åŠ è¿”å€¼
 public class Test202_5 {
 	public static void main(String[] args) {
 		new Thread(()->{
-			System.out.println("³Ô·¹Ë¯¾õ´ò¶º¶º");
+			System.out.println("åƒé¥­ç¡è§‰æ‰“é€—é€—");
 		}).start();
 		new Thread(()->{
 			for(int i=0;i<10;i++) {
-				System.out.println("³Ô·¹Ë¯¾õ");
+				System.out.println("åƒé¥­ç¡è§‰");
 			}
 		}).start();
 	}

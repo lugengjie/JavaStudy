@@ -1,4 +1,4 @@
-package ÊÖĞ´HttpserverÏîÄ¿.Test263;
+package æ‰‹å†™Httpserveré¡¹ç›®.Test263;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,21 +10,21 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * ·â×°ÇëÇóĞ­Òé£º·â×°ÇëÇó²ÎÊıÎªMap
+ * å°è£…è¯·æ±‚åè®®ï¼šå°è£…è¯·æ±‚å‚æ•°ä¸ºMap
  * @author jie
  *
  */
 public class Request {
-	//Ğ­ÒéĞÅÏ¢
+	//åè®®ä¿¡æ¯
 	private String requestInfo;
-	//ÇëÇó·½Ê½
+	//è¯·æ±‚æ–¹å¼
 	private String method;
-	//ÇëÇóurl
+	//è¯·æ±‚url
 	private String url;
-	//ÇëÇó²ÎÊı
+	//è¯·æ±‚å‚æ•°
 	private String queryStr;
 	private final String CRLF="\r\n";
-	//´æ´¢²ÎÊı
+	//å­˜å‚¨å‚æ•°
 	private Map<String,List<String>> parameterMap;
 	public Request(InputStream is) {
 		parameterMap=new HashMap<String,List<String>>();
@@ -43,26 +43,26 @@ public class Request {
 		this(client.getInputStream());
 	}
 	private void parseRequestInfo() {
-		System.out.println("------·Ö½â------");
-		System.out.println("1.»ñÈ¡ÇëÇó·½Ê½£º¿ªÍ·µÚÒ»¸ö/------");
+		System.out.println("------åˆ†è§£------");
+		System.out.println("1.è·å–è¯·æ±‚æ–¹å¼ï¼šå¼€å¤´ç¬¬ä¸€ä¸ª/------");
 		this.method=this.requestInfo.substring(0,requestInfo.indexOf("/")).toLowerCase();
 		this.method=this.method.trim();
-		System.out.println("---2¡¢»ñÈ¡ÇëÇóurl:µÚÒ»¸ö/µ½HTTP/---");
-		System.out.println("---¿ÉÄÜ°üº¬ÇëÇó²ÎÊı£¿Ç°ÃæµÄÎ»url---");
-		//1)»ñÈ¡/µÄÎ»ÖÃ
+		System.out.println("---2ã€è·å–è¯·æ±‚url:ç¬¬ä¸€ä¸ª/åˆ°HTTP/---");
+		System.out.println("---å¯èƒ½åŒ…å«è¯·æ±‚å‚æ•°ï¼Ÿå‰é¢çš„ä½url---");
+		//1)è·å–/çš„ä½ç½®
 		int startInx=this.requestInfo.indexOf("/")+1;
-		//2)»ñÈ¡HTTPµÄÎ»ÖÃ
+		//2)è·å–HTTPçš„ä½ç½®
 		int endInx=this.requestInfo.indexOf("HTTP/");
-		//3)·Ö¸î×Ö·û´®
+		//3)åˆ†å‰²å­—ç¬¦ä¸²
 		this.url=this.requestInfo.substring(startInx, endInx);
-		//4)»ñÈ¡?µÄÎ»ÖÃ
+		//4)è·å–?çš„ä½ç½®
 		int queryIdx=this.url.indexOf("?");
-		if(queryIdx>=0) {//±íÊ¾´æÔÚ²ÎÊı
+		if(queryIdx>=0) {//è¡¨ç¤ºå­˜åœ¨å‚æ•°
 			String[] urlArray=this.url.split("\\?");
 			this.url=urlArray[0];
 			this.queryStr=urlArray[1].trim();
 		}
-		System.out.println("3¡¢»ñÈ¡ÇëÇó²ÎÊı£ºÈç¹ûGETÒÑ¾­»ñÈ¡£¬Èç¹ûÊÇPOST¿ÉÄÜÔÚÇëÇóÌåÖĞ");
+		System.out.println("3ã€è·å–è¯·æ±‚å‚æ•°ï¼šå¦‚æœGETå·²ç»è·å–ï¼Œå¦‚æœæ˜¯POSTå¯èƒ½åœ¨è¯·æ±‚ä½“ä¸­");
 		
 		if(method.equals("post")) {
 			String qStr=this.requestInfo.substring(this.requestInfo.lastIndexOf(CRLF)).trim();
@@ -74,21 +74,21 @@ public class Request {
 		}
 		queryStr=null==queryStr?"":queryStr;
 		System.out.println(method+"-->"+url+"-->"+queryStr);
-		//×ª³ÉMap
+		//è½¬æˆMap
 	}
-	//´¦ÀíÇëÇó²ÎÊıÎªMap
+	//å¤„ç†è¯·æ±‚å‚æ•°ä¸ºMap
 	private void convertMap() {
-		//1.·Ö¸î×Ö·û´®&
+		//1.åˆ†å‰²å­—ç¬¦ä¸²&
 		String[] keyValues=this.queryStr.split("&");
 		for(String queryStr:keyValues) {
-			//2.ÔÙ´Î·Ö¸î×Ö·û´®=
+			//2.å†æ¬¡åˆ†å‰²å­—ç¬¦ä¸²=
 			String[] kv=queryStr.split("=");
 			kv=Arrays.copyOf(kv,2);
-			//»ñÈ¡keyºÍvalue
+			//è·å–keyå’Œvalue
 			String key=kv[0];
 			String value=kv[1];
-			//´æ´¢µ½mapÖĞ
-			if(!parameterMap.containsKey(key)) {//µÚÒ»´Î
+			//å­˜å‚¨åˆ°mapä¸­
+			if(!parameterMap.containsKey(key)) {//ç¬¬ä¸€æ¬¡
 				parameterMap.put(key,new ArrayList<String>());
 			}
 			parameterMap.get(key).add(value);

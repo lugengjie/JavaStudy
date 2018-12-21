@@ -1,10 +1,10 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.ArrayListTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.ArrayListTest;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ArrayListË÷ÒıÓëË³ĞòÏà¹Ø·½·¨
+ * ArrayListç´¢å¼•ä¸é¡ºåºç›¸å…³æ–¹æ³•
  * @author jie
  *
  */
@@ -17,7 +17,7 @@ public class Test136 {
 		System.out.println(list);
 		
 		/*
-		 * ÔÚË÷ÒıÎª1µÄÎ»ÖÃ¼ÓÈëvalue,Ô­À´µÄÔªËØÏòºóÒÆÎ»
+		 * åœ¨ç´¢å¼•ä¸º1çš„ä½ç½®åŠ å…¥value,åŸæ¥çš„å…ƒç´ å‘åç§»ä½
 		 */
 		list.add(1,"d");
 		System.out.println(list);
@@ -27,8 +27,8 @@ public class Test136 {
 		
 		/**
 		 * int indexOf(Object c);
-		 * ·µ»ØObjext CµÚÒ»´Î³öÏÖÎ»ÖÃµÄË÷Òı
-		 * ÎŞ·µ»Ø-1
+		 * è¿”å›Objext Cç¬¬ä¸€æ¬¡å‡ºç°ä½ç½®çš„ç´¢å¼•
+		 * æ— è¿”å›-1
 		 */
 		System.out.println(list.indexOf("a"));
 		System.out.println(list.lastIndexOf("gg"));

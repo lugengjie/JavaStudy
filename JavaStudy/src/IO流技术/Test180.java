@@ -1,33 +1,33 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 /**
- * ×°ÊÎÆ÷Éè¼ÆÄ£Ê½
- * Ä£Äâ¿§·È
- * 1¡¢³éÏó×é¼ş:ĞèÒª×°ÊÎµÄ³éÏó¶ÔÏó(½Ó¿Ú»ò³éÏó¸¸Àà)
- * 2¡¢¾ßÌå×é¼ş:ĞèÒª×°ÊÎµÄ¶ÔÏó
- * 3¡¢³éÏó×°ÊÎÀà:°üº¬ÁË¶Ô³éÏó×é¼şµÄÒıÓÃÒÔ¼°×°ÊÎ×Å¹²ÓĞµÄ·½·¨
- * 4¡¢¾ßÌå×°ÊÎÀà:±»×°ÊÎµÄ¶ÔÏó
+ * è£…é¥°å™¨è®¾è®¡æ¨¡å¼
+ * æ¨¡æ‹Ÿå’–å•¡
+ * 1ã€æŠ½è±¡ç»„ä»¶:éœ€è¦è£…é¥°çš„æŠ½è±¡å¯¹è±¡(æ¥å£æˆ–æŠ½è±¡çˆ¶ç±»)
+ * 2ã€å…·ä½“ç»„ä»¶:éœ€è¦è£…é¥°çš„å¯¹è±¡
+ * 3ã€æŠ½è±¡è£…é¥°ç±»:åŒ…å«äº†å¯¹æŠ½è±¡ç»„ä»¶çš„å¼•ç”¨ä»¥åŠè£…é¥°ç€å…±æœ‰çš„æ–¹æ³•
+ * 4ã€å…·ä½“è£…é¥°ç±»:è¢«è£…é¥°çš„å¯¹è±¡
  * @author jie
  */
 public class Test180 {
 	public static void main(String[] args) {
 		Coffee coffee=new Coffee();
 		System.out.println(coffee.info()+"-->"+coffee.cost());
-		Milk milk=new Milk(coffee);//×°ÊÎ
+		Milk milk=new Milk(coffee);//è£…é¥°
 		System.out.println(milk.info()+"-->"+milk.cost());
-		Suger suger=new Suger(coffee);//×°ÊÎ
+		Suger suger=new Suger(coffee);//è£…é¥°
 		System.out.println(suger.info()+"-->"+suger.cost());
-		milk=new Milk(suger);//×°ÊÎ
+		milk=new Milk(suger);//è£…é¥°
 		System.out.println(milk.info()+"-->"+milk.cost());
 		
 	}
 	
 }
 interface Drink{
-	double cost();  //¼Û¸ñ
-	String info();	//ĞÅÏ¢
+	double cost();  //ä»·æ ¼
+	String info();	//ä¿¡æ¯
 }
 class Coffee implements Drink{
-	private String name="Ô­Î¶¿§·È";
+	private String name="åŸå‘³å’–å•¡";
 	@Override
 	public double cost() {
 		return 10;
@@ -66,7 +66,7 @@ class Milk extends Decorate{
 	}
 	@Override
 	public String info() {
-		return drink.info()+"¼ÓÅ£ÄÌ";
+		return drink.info()+"åŠ ç‰›å¥¶";
 	}	
 }
 class Suger extends Decorate{
@@ -80,7 +80,7 @@ class Suger extends Decorate{
 	}
 	@Override
 	public String info() {
-		return drink.info()+"¼ÓÌÇ";
+		return drink.info()+"åŠ ç³–";
 	}
 	
 }

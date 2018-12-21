@@ -1,4 +1,4 @@
-package ÍøÂç±à³Ì;
+package ç½‘ç»œç¼–ç¨‹;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -15,21 +15,21 @@ import java.util.Date;
 
 public class Test241_2_service {
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
-		System.out.println("½ÓÊÕ·½Æô¶¯ÖĞ....");
-		//* 1.Ê¹ÓÃDatagramSocketÖ¸¶¨¶Ë¿Ú ´´½¨½ÓÊÕ¶Ë
+		System.out.println("æ¥æ”¶æ–¹å¯åŠ¨ä¸­....");
+		//* 1.ä½¿ç”¨DatagramSocketæŒ‡å®šç«¯å£ åˆ›å»ºæ¥æ”¶ç«¯
 		DatagramSocket server=new DatagramSocket(9999);
-		//* 2.×¼±¸ÈİÆ÷·â×°³ÉDatagramPacket°ü¹ü
+		//* 2.å‡†å¤‡å®¹å™¨å°è£…æˆDatagramPacketåŒ…è£¹
 		byte[] container=new byte[1024*60];
 		DatagramPacket packet=new DatagramPacket(container, 0,container.length);
-		//* 3.×èÈûÊ½½ÓÊÕ°ü¹üreceive(DatagramPacket p)
+		//* 3.é˜»å¡å¼æ¥æ”¶åŒ…è£¹receive(DatagramPacket p)
 		server.receive(packet);
-		//* 4.·ÖÎöÊı¾İ
+		//* 4.åˆ†ææ•°æ®
 		//* byte[] getData()
 		//* 	   getLength()
 		byte[] datas=packet.getData();
 		int len=packet.getLength();
-		IOUtils.byteArrayToFile(datas, "src/ÍøÂç±à³Ì/logo2.png");
-		//* 5.ÊÍ·Å×ÊÔ´
+		IOUtils.byteArrayToFile(datas, "src/ç½‘ç»œç¼–ç¨‹/logo2.png");
+		//* 5.é‡Šæ”¾èµ„æº
 		server.close();
 	}
 }

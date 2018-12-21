@@ -1,6 +1,6 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * ¿ÉÖØÈëËø£ºËø¿ÉÒÔÑÓĞøÊ¹ÓÃ
+ * å¯é‡å…¥é”ï¼šé”å¯ä»¥å»¶ç»­ä½¿ç”¨
  * @author jie
  *
  */
@@ -30,10 +30,10 @@ public class Test230_3 {
 		System.out.println(test.lock.getHoldCount());
 	}
 	public void test() {
-		// µÚÒ»´Î»ñÈ¡Ëø
+		// ç¬¬ä¸€æ¬¡è·å–é”
 		synchronized(this) {
 			while(true) {
-				//µÚ¶ş´Î»ñÈ¡Ëø
+				//ç¬¬äºŒæ¬¡è·å–é”
 				synchronized (this) {
 					System.out.println("ReentrantLock");
 				}
@@ -47,15 +47,15 @@ public class Test230_3 {
 
 	}
 }
-//²»¿ÉÖØÈëËø
+//ä¸å¯é‡å…¥é”
 class ReLock{
-	//ÊÇ·ñÕ¼ÓÃ
+	//æ˜¯å¦å ç”¨
 	private boolean isLocked=false;
-	//´æ´¢Ïß³Ì
+	//å­˜å‚¨çº¿ç¨‹
 	private Thread lockedBy=null; 
-	//¼ÆÊıÆ÷
+	//è®¡æ•°å™¨
 	private int holdCount=0;
-	//Ê¹ÓÃËø
+	//ä½¿ç”¨é”
 	public synchronized void lock() throws InterruptedException {
 		Thread t=Thread.currentThread();
 		while(isLocked&&lockedBy!=t) {
@@ -65,7 +65,7 @@ class ReLock{
 		lockedBy =t;
 		holdCount++;
 	}
-	//ÊÍ·ÅËø
+	//é‡Šæ”¾é”
 	public synchronized void unlock() {
 		if(Thread.currentThread()==lockedBy) {
 			holdCount--;

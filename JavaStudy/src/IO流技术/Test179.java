@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -11,26 +11,26 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * IO¹¤¾ßÀà
+ * IOå·¥å…·ç±»
  * @author jie
  *
  */
 public class Test179 {
 	public static void main(String[] args) {
-		//ÎÄ¼şµ½ÎÄ¼ş
+		//æ–‡ä»¶åˆ°æ–‡ä»¶
 //		try {
-//			InputStream is=new FileInputStream("src/IOÁ÷¼¼Êõ/test.txt");
-//			OutputStream os=new FileOutputStream("src/IOÁ÷¼¼Êõ/test2.txt");
+//			InputStream is=new FileInputStream("src/IOæµæŠ€æœ¯/test.txt");
+//			OutputStream os=new FileOutputStream("src/IOæµæŠ€æœ¯/test2.txt");
 //			copy(is,os);
 //			close(is,os);
 //		} catch (FileNotFoundException e) {
 //			e.printStackTrace();
 //		}
 //		
-		//ÎÄ¼şµ½×Ö½ÚÊı×é
+		//æ–‡ä»¶åˆ°å­—èŠ‚æ•°ç»„
 		byte[] datas=null;
 		try {
-			InputStream is=new FileInputStream("src/IOÁ÷¼¼Êõ/03.jpeg");
+			InputStream is=new FileInputStream("src/IOæµæŠ€æœ¯/03.jpeg");
 			ByteArrayOutputStream os=new ByteArrayOutputStream();
 			copy(is,os);
 			datas=os.toByteArray();
@@ -40,9 +40,9 @@ public class Test179 {
 			e.printStackTrace();
 		}
 		
-		//×Ö½ÚÊı×éµ½ÎÄ¼ş
+		//å­—èŠ‚æ•°ç»„åˆ°æ–‡ä»¶
 		try {
-			OutputStream os=new FileOutputStream("src/IOÁ÷¼¼Êõ/04.jpeg");
+			OutputStream os=new FileOutputStream("src/IOæµæŠ€æœ¯/04.jpeg");
 			ByteArrayInputStream is=new ByteArrayInputStream(datas);
 			copy(is,os);
 			System.out.println(datas.length);
@@ -53,7 +53,7 @@ public class Test179 {
 	}
 	
 	/**
-	 * ¶Ô½ÓÊäÈëÊä³öÁ÷
+	 * å¯¹æ¥è¾“å…¥è¾“å‡ºæµ
 	 */
 	private static void copy(InputStream is,OutputStream os) {			
 		try {

@@ -1,10 +1,10 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 
 import java.awt.Container;
 
 /**
- * Ğ­×÷Ä£ĞÍ£ºÉú²úÕßÏû·ÑÕßÊµÏÖ·½·¨1£º¹Ü³Ì·¨
- * ½èÖú»º³åÇø
+ * åä½œæ¨¡å‹ï¼šç”Ÿäº§è€…æ¶ˆè´¹è€…å®ç°æ–¹æ³•1ï¼šç®¡ç¨‹æ³•
+ * å€ŸåŠ©ç¼“å†²åŒº
  * @author jie
  */
 public class Test222 {
@@ -14,7 +14,7 @@ public class Test222 {
 		new Consumer(container).start();
 	}
 }
-//Éú²úÕß
+//ç”Ÿäº§è€…
 class Productor extends Thread{
 	SynContainer container;
 
@@ -24,14 +24,14 @@ class Productor extends Thread{
 
 	@Override
 	public void run() {
-		//Éú²ú
+		//ç”Ÿäº§
 		for(int i=0;i<100;i++) {
-			System.out.println("Éú²úµÚ"+i+"¸öÂøÍ·");
+			System.out.println("ç”Ÿäº§ç¬¬"+i+"ä¸ªé¦’å¤´");
 			container.push(new Streambun(i));
 		}
 	}
 }
-//Ïû·ÑÕß
+//æ¶ˆè´¹è€…
 class Consumer extends Thread{
 	SynContainer container;
 
@@ -41,11 +41,11 @@ class Consumer extends Thread{
 	@Override
 	public void run() {
 		for(int i=0;i<100;i++) {
-			System.out.println("Ïû·ÑµÚ"+container.pop().id+"¸öÂøÍ·");	
+			System.out.println("æ¶ˆè´¹ç¬¬"+container.pop().id+"ä¸ªé¦’å¤´");	
 		}
 	}
 }
-//ÂøÍ·
+//é¦’å¤´
 class Streambun{
 	int id;
 
@@ -54,32 +54,32 @@ class Streambun{
 		this.id = id;
 	}
 }
-//»º³åÇø
+//ç¼“å†²åŒº
 class SynContainer{
-	//´æ´¢ÈİÆ÷
+	//å­˜å‚¨å®¹å™¨
 	Streambun[] buns=new Streambun[10];
-	//¼ÆÊıÆ÷
+	//è®¡æ•°å™¨
 	int count=0;
-	//´æ´¢ Éú²ú
+	//å­˜å‚¨ ç”Ÿäº§
 	public synchronized void push(Streambun bun) {
-		//ºÎÊ±ÄÜÉú²ú ÈİÆ÷´æÔÚ¿Õ¼ä
-		//²»ÄÜÉú²ú Ö»ÓĞµÈ´ı
+		//ä½•æ—¶èƒ½ç”Ÿäº§ å®¹å™¨å­˜åœ¨ç©ºé—´
+		//ä¸èƒ½ç”Ÿäº§ åªæœ‰ç­‰å¾…
 		if(count==buns.length) {
 			try {
-				this.wait();  //Ïß³Ì×èÈû£¬Ïû·ÑÕßÍ¨ÖªÉú²ú½â³ı
+				this.wait();  //çº¿ç¨‹é˜»å¡ï¼Œæ¶ˆè´¹è€…é€šçŸ¥ç”Ÿäº§è§£é™¤
 			} catch (InterruptedException e) {		
 				e.printStackTrace();
 			}
 		}
-		//´æÔÚ¿Õ¼ä ¿ÉÒÔÉú²ú
+		//å­˜åœ¨ç©ºé—´ å¯ä»¥ç”Ÿäº§
 		buns[count]=bun;
 		count++;
-		//´æÔÚÊı¾İ¿ÉÒÔÍ¨ÖªÏû·Ñ
+		//å­˜åœ¨æ•°æ®å¯ä»¥é€šçŸ¥æ¶ˆè´¹
 		this.notifyAll();
 	}
 	public synchronized Streambun pop() {
-		//ºÎÊ±Ïû·Ñ ÈİÆ÷ÖĞÊÇ·ñ´æÔÚÊı¾İ
-		//²»´æÔÚ Ö»ÄÜµÈ´ı
+		//ä½•æ—¶æ¶ˆè´¹ å®¹å™¨ä¸­æ˜¯å¦å­˜åœ¨æ•°æ®
+		//ä¸å­˜åœ¨ åªèƒ½ç­‰å¾…
 		if(count==0) {
 			try {
 				this.wait();
@@ -87,10 +87,10 @@ class SynContainer{
 				e.printStackTrace();
 			}
 		}
-		//´æÔÚÊı¾İ ¿ÉÒÔÏû·Ñ
+		//å­˜åœ¨æ•°æ® å¯ä»¥æ¶ˆè´¹
 		count--;
 		Streambun bun=buns[count];
-		//´æÔÚ¿Õ¼ä£¬¿ÉÒÔ»½ĞÑ¶Ô·½Éú²ú
+		//å­˜åœ¨ç©ºé—´ï¼Œå¯ä»¥å”¤é†’å¯¹æ–¹ç”Ÿäº§
 		this.notifyAll();
 		return bun;
 	}

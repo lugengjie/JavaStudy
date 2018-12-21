@@ -1,8 +1,8 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.LinkedListTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.LinkedListTest;
 
 /**
- * ÊµÏÖLinkedListµÄremove()·½·¨
- * ÒÆ³ı½Úµã
+ * å®ç°LinkedListçš„remove()æ–¹æ³•
+ * ç§»é™¤èŠ‚ç‚¹
  * @author jie
  *
  */
@@ -53,7 +53,7 @@ public class Test143 {
 	public Node getNode(int index) {
 		Node temp=null;
 		if(index<0||index>size-1) {
-			throw new RuntimeException("Ë÷ÒıÔ½½ç£¡");
+			throw new RuntimeException("ç´¢å¼•è¶Šç•Œï¼");
 		}
 		if(index<(size>>1)) {
 			temp=first;

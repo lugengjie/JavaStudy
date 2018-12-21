@@ -1,4 +1,4 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.LinkedListTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.LinkedListTest;
 
 public class Node {
 	Node previous;

@@ -1,4 +1,4 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.Other;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.Other;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * ±í¸ñÊı¾İ´æ´¢ map List
+ * è¡¨æ ¼æ•°æ®å­˜å‚¨ map List
  * @author jie
  *
  */
@@ -16,17 +16,17 @@ public class Test164 {
 		Map<String,Object> row1=new HashMap<String,Object>();
 		row1.put("id",1000);
 		row1.put("salary",20000);
-		row1.put("name","ÕÅÈı");
+		row1.put("name","å¼ ä¸‰");
 		
 		Map<String,Object> row2=new HashMap<String,Object>();
 		row2.put("id",2000);
 		row2.put("salary",60000);
-		row2.put("name","ÀîËÄ");
+		row2.put("name","æå››");
 		
 		Map<String,Object> row3=new HashMap<String,Object>();
 		row3.put("id",3000);
 		row3.put("salary",20000);
-		row3.put("name","ÍõÎå");
+		row3.put("name","ç‹äº”");
 		
 		List<Map<String,Object>> table=new ArrayList<>();
 		table.add(row1);

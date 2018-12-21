@@ -1,15 +1,15 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 /**
- * Ïß³Ì°²È«£º²¢·¢Ê±±£Ö¤Êı¾İµÄÕıÈ·ĞÔ£¬Ğ§ÂÊ¾¡¿ÉÄÜ¸ß
+ * çº¿ç¨‹å®‰å…¨ï¼šå¹¶å‘æ—¶ä¿è¯æ•°æ®çš„æ­£ç¡®æ€§ï¼Œæ•ˆç‡å°½å¯èƒ½é«˜
  * @author jie
  *synchronized
- *1.Í¬²½·½·¨
- *2.Í¬²½¿é:Ä¿±ê¸üÃ÷È·
+ *1.åŒæ­¥æ–¹æ³•
+ *2.åŒæ­¥å—:ç›®æ ‡æ›´æ˜ç¡®
  */
 public class Test214_3 {
 	public static void main(String[] args) throws InterruptedException {

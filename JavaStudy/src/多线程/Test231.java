@@ -1,9 +1,9 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * ±È½Ï²¢½»»» CAS
+ * æ¯”è¾ƒå¹¶äº¤æ¢ CAS
  * @author jie
  *
  */
@@ -12,7 +12,7 @@ public class Test231 {
 	public static void main(String[] args) {
 		for(int i=0;i<5;i++) {
 			new Thread(()->{
-				//Ä£ÄâÍøÂçÑÓÊ±
+				//æ¨¡æ‹Ÿç½‘ç»œå»¶æ—¶
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
@@ -20,11 +20,11 @@ public class Test231 {
 				}
 				Integer left=stock.decrementAndGet();
 				if(left<1) {
-					System.out.println("ÇÀ¹âÁË");
+					System.out.println("æŠ¢å…‰äº†");
 					return;
 				}
-				System.out.print(Thread.currentThread().getName()+"ÇÀÁËÒ»¼şÉÌÆ·");
-				System.out.println("»¹Ê£"+left);
+				System.out.print(Thread.currentThread().getName()+"æŠ¢äº†ä¸€ä»¶å•†å“");
+				System.out.println("è¿˜å‰©"+left);
 			}).start();
 		}
 	}

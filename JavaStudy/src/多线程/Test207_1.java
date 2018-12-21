@@ -1,6 +1,6 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * Ïß³ÌºÏ²¢£¬²å¶ÓÏß³Ì
+ * çº¿ç¨‹åˆå¹¶ï¼Œæ’é˜Ÿçº¿ç¨‹
  * @author jie
  *
  */
@@ -14,7 +14,7 @@ public class Test207_1 {
 		t.start();
 		for(int i=0;i<100;i++) {
 			if(i%20==0) {
-				t.join(); //²å¶Ó,main±»×èÈû
+				t.join(); //æ’é˜Ÿ,mainè¢«é˜»å¡
 			}
 			System.out.println("main"+i);
 		}

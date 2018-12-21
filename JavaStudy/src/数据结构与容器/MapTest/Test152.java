@@ -1,7 +1,7 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.MapTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.MapTest;
 /**
  * put(key,value)
- * ´æ´¢¼üÖµ¶Ô
+ * å­˜å‚¨é”®å€¼å¯¹
  * @author jie
  *
  */
@@ -25,9 +25,9 @@ public class Test152 {
 		
 	}
 	private int hash(int v,int length) {
-		//È¡Ä£ÔËËã
+		//å–æ¨¡è¿ç®—
 		System.out.println("hash:"+(v%length));
-		//Î»ÔËËã£¬Ğ§ÂÊ¸ß
+		//ä½è¿ç®—ï¼Œæ•ˆç‡é«˜
 		System.out.println("hash:"+(v&(length-1)));
 		return v&(length-1);
 	}

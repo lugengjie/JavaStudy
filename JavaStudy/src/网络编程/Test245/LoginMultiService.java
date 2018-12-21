@@ -1,4 +1,4 @@
-package ÍøÂç±à³Ì.Test245;
+package ç½‘ç»œç¼–ç¨‹.Test245;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -7,22 +7,22 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * Ä£ÄâµÇÂ½  Ë«Ïò
- * ´´½¨·şÎñÆ÷
- * 1.Ö¸¶¨¶Ë¿Ú Ê¹ÓÃServerSocket´´½¨·şÎñÆ÷
- * 2.×èÈûÊ½µÈ´ıÁ¬½Ó accept
- * 3.²Ù×÷£ºÊäÈëÊä³ö²Ù×÷
- * 4.ÊÍ·Å×ÊÔ´
+ * æ¨¡æ‹Ÿç™»é™†  åŒå‘
+ * åˆ›å»ºæœåŠ¡å™¨
+ * 1.æŒ‡å®šç«¯å£ ä½¿ç”¨ServerSocketåˆ›å»ºæœåŠ¡å™¨
+ * 2.é˜»å¡å¼ç­‰å¾…è¿æ¥ accept
+ * 3.æ“ä½œï¼šè¾“å…¥è¾“å‡ºæ“ä½œ
+ * 4.é‡Šæ”¾èµ„æº
  * @author jie
  *
  */
 public class LoginMultiService {
 	public static void main(String[] args) throws IOException {
 		System.out.println("------Service------");
-		// * 1.Ö¸¶¨¶Ë¿Ú Ê¹ÓÃServiceSocket´´½¨·şÎñÆ÷
+		// * 1.æŒ‡å®šç«¯å£ ä½¿ç”¨ServiceSocketåˆ›å»ºæœåŠ¡å™¨
 		ServerSocket server=new ServerSocket(8888);
 		while(true) {
-			// * 2.×èÈûÊ½µÈ´ıÁ¬½Ó accept
+			// * 2.é˜»å¡å¼ç­‰å¾…è¿æ¥ accept
 			Socket client=server.accept();
 			new Thread(new Channel(client)).start();
 		}
@@ -44,7 +44,7 @@ public class LoginMultiService {
 		}
 		@Override
 		public void run() {
-			// *·ÖÎö
+			// *åˆ†æ
 			String[] dataArray=receive().split("&");
 			String uname=null;
 			String upw=null;
@@ -52,19 +52,19 @@ public class LoginMultiService {
 				String[] msg=info.split("=");
 				if(msg[0].equals("uname")) {
 					uname=msg[1];
-					System.out.println("ÓÃ»§Ãû£º"+msg[1]);
+					System.out.println("ç”¨æˆ·åï¼š"+msg[1]);
 				}else {
 					upw=msg[1];
-					System.out.println("ÃÜÂë£º"+msg[1]);
+					System.out.println("å¯†ç ï¼š"+msg[1]);
 				}
 			}
 			
 			if(uname.equals("a")&&upw.equals("a")) {
-				send("µÇÂ½³É¹¦");
+				send("ç™»é™†æˆåŠŸ");
 			}else {
-				send("µÇÂ½Ê§°Ü");	
+				send("ç™»é™†å¤±è´¥");	
 			}
-			// * 4.ÊÍ·Å×ÊÔ´
+			// * 4.é‡Šæ”¾èµ„æº
 			release();
 		}
 		private String receive() {

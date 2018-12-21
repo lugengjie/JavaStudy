@@ -1,14 +1,14 @@
-package ÍøÂç±à³Ì;
+package ç½‘ç»œç¼–ç¨‹;
 
 import java.net.InetSocketAddress;
 
 /**
- * ¶Ë¿Ú
- * 1.Çø·ÖÈí¼ş
- * 2.2¸ö×Ö½Ú0-65535 UDP TCP
- * 3.Í¬Ò»¸öĞ­Òé¶Ë¿Ú²»ÄÜ³åÍ»
+ * ç«¯å£
+ * 1.åŒºåˆ†è½¯ä»¶
+ * 2.2ä¸ªå­—èŠ‚0-65535 UDP TCP
+ * 3.åŒä¸€ä¸ªåè®®ç«¯å£ä¸èƒ½å†²çª
  * @author jie
- * 1.¹¹ÔìÆ÷ new InetSocketAddress(µØÖ·|ÓòÃû£¬¶Ë¿Ú)
+ * 1.æ„é€ å™¨ new InetSocketAddress(åœ°å€|åŸŸåï¼Œç«¯å£)
  * getAddress()
  * getPost()
  * getHostName()
@@ -17,7 +17,7 @@ import java.net.InetSocketAddress;
  */
 public class Test236 {
 	public static void main(String[] args) {
-		//°üº¬¶Ë¿Ú
+		//åŒ…å«ç«¯å£
 		InetSocketAddress isa=new InetSocketAddress("localhost",8080);
 		InetSocketAddress isa2=new InetSocketAddress("127.0.0.1",8080);
 		

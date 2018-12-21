@@ -1,4 +1,4 @@
-package ÍøÂç±à³Ì;
+package ç½‘ç»œç¼–ç¨‹;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -9,15 +9,15 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 /**
- * ÅÀ³æÔ­Àí+Ä£Äâä¯ÀÀÆ÷
+ * çˆ¬è™«åŸç†+æ¨¡æ‹Ÿæµè§ˆå™¨
  * @author jie
  *
  */
 public class Test238_2 {
 	public static void main(String[] args) throws Exception {
-		//»ñÈ¡URL
+		//è·å–URL
 		URL url=new URL("https://www.dianping.com");
-		//ÏÂÔØ×ÊÔ´
+		//ä¸‹è½½èµ„æº
 		
 		HttpURLConnection htc=(HttpURLConnection) url.openConnection();
 		htc.setRequestMethod("GET");

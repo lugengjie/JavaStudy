@@ -1,4 +1,4 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -7,7 +7,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * ÈÎÎñµ÷¶È£ºTimerÀàºÍTimerTaskÀà
+ * ä»»åŠ¡è°ƒåº¦ï¼šTimerç±»å’ŒTimerTaskç±»
  * @author jie
  *
  */
@@ -21,7 +21,7 @@ public class Test224 {
 	}
 	
 }
-//ÈÎÎñÀà
+//ä»»åŠ¡ç±»
 class MyTask extends TimerTask{
 	@Override
 	public void run() {

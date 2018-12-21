@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,23 +8,23 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 
 /**
- * CommonIO¿½±´ºËĞÄ²Ù×÷
+ * CommonIOæ‹·è´æ ¸å¿ƒæ“ä½œ
  * @author jie
  *
  */
 public class Test192 {
 	public static void main(String[] args) throws IOException {
-		//¸´ÖÆÎÄ¼ş
-//		FileUtils.copyFile(new File("src/IOÁ÷¼¼Êõ/¿ªÆª.mp4"), new File("src/IOÁ÷¼¼Êõ/Copy¿ªÆª.mp4"));
-		//¿½±´ÎÄ¼şµ½Ä¿Â¼
-//		FileUtils.copyFileToDirectory(new File("src/IOÁ÷¼¼Êõ/¿ªÆª.mp4"),new File("lib"));
-		//¿½±´Ä¿Â¼µ½Ä¿Â¼
-//		FileUtils.copyDirectoryToDirectory(new File("lib"), new File("src/IOÁ÷¼¼Êõ/lib2"));
-		//¿½±´Ä¿Â¼
-//		FileUtils.copyDirectory(new File("lib"), new File("src/IOÁ÷¼¼Êõ/lib2"));
-		//¿½±´URLÄÚÈİ
+		//å¤åˆ¶æ–‡ä»¶
+//		FileUtils.copyFile(new File("src/IOæµæŠ€æœ¯/å¼€ç¯‡.mp4"), new File("src/IOæµæŠ€æœ¯/Copyå¼€ç¯‡.mp4"));
+		//æ‹·è´æ–‡ä»¶åˆ°ç›®å½•
+//		FileUtils.copyFileToDirectory(new File("src/IOæµæŠ€æœ¯/å¼€ç¯‡.mp4"),new File("lib"));
+		//æ‹·è´ç›®å½•åˆ°ç›®å½•
+//		FileUtils.copyDirectoryToDirectory(new File("lib"), new File("src/IOæµæŠ€æœ¯/lib2"));
+		//æ‹·è´ç›®å½•
+//		FileUtils.copyDirectory(new File("lib"), new File("src/IOæµæŠ€æœ¯/lib2"));
+		//æ‹·è´URLå†…å®¹
 //		String url="http://pic19.nipic.com/20120210/7827303_221233267358_2.jpg";
-//		FileUtils.copyURLToFile(new URL(url), new File("src/IOÁ÷¼¼Êõ/copyPicture.jpg"));
+//		FileUtils.copyURLToFile(new URL(url), new File("src/IOæµæŠ€æœ¯/copyPicture.jpg"));
 		String datas=IOUtils.toString(new URL("http://www.163.com"),"gbk");
 		System.out.println(datas);
 	}

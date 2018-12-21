@@ -1,11 +1,11 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * ²¢·¢£¬¹²Ïí×ÊÔ´£¨Ïß³Ì°²È«£©
+ * å¹¶å‘ï¼Œå…±äº«èµ„æºï¼ˆçº¿ç¨‹å®‰å…¨ï¼‰
  * @author jie
  *
  */
 public class Test199_1 implements Runnable{
-	//Æ±Êı
+	//ç¥¨æ•°
 	private int ticketNums=99;
 	@Override
 	public void run() {
@@ -23,12 +23,12 @@ public class Test199_1 implements Runnable{
 		
 	}
 	public static void main(String[] args) {
-		//Ò»·İ×ÊÔ´
+		//ä¸€ä»½èµ„æº
 		Test199_1 web=new Test199_1();
-		//¶à¸ö´úÀí
-		new Thread(web,"ÂëÅ©").start();;
-		new Thread(web,"ÂëĞó").start();
-		new Thread(web,"Âëó¨").start();
+		//å¤šä¸ªä»£ç†
+		new Thread(web,"ç å†œ").start();;
+		new Thread(web,"ç ç•œ").start();
+		new Thread(web,"ç èŸ¥").start();
 	}
 	
 }

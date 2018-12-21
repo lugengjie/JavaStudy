@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -11,19 +11,19 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * ¶Ô½ÓÁ÷
+ * å¯¹æ¥æµ
  * @author jie
  *
  */
 public class Test178 {
 	public static void main(String[] args) {
-		byte[] flush=fileToByteArray("src/IOÁ÷¼¼Êõ/03.jpeg");
-		byteArrayToFile(flush,"src/IOÁ÷¼¼Êõ/04.jpeg");
+		byte[] flush=fileToByteArray("src/IOæµæŠ€æœ¯/03.jpeg");
+		byteArrayToFile(flush,"src/IOæµæŠ€æœ¯/04.jpeg");
 	}
 	/**
-	 * Í¼Æ¬¶ÁÈ¡µ½×Ö½ÚÊı×é
-	 * 1£©Í¼Æ¬µ½³ÌĞòInputSteam
-	 * 2)³ÌĞòµ½×Ö½ÚÊı×éByteArrayOutputStream
+	 * å›¾ç‰‡è¯»å–åˆ°å­—èŠ‚æ•°ç»„
+	 * 1ï¼‰å›¾ç‰‡åˆ°ç¨‹åºInputSteam
+	 * 2)ç¨‹åºåˆ°å­—èŠ‚æ•°ç»„ByteArrayOutputStream
 	 */
 	private static byte[] fileToByteArray(String filePath) {
 		File file=new File(filePath);
@@ -32,7 +32,7 @@ public class Test178 {
 		try {
 			is=new FileInputStream(file);
 			baos=new ByteArrayOutputStream();
-			byte[] flush=new byte[1024]; //»º´æÈİÆ÷
+			byte[] flush=new byte[1024]; //ç¼“å­˜å®¹å™¨
 			int len=-1;
 			while(-1!=(len=is.read(flush))) {
 				baos.write(flush, 0, len);
@@ -55,9 +55,9 @@ public class Test178 {
 		return null;
 	}
 	/**
-	 * ×Ö½ÚÊı×éĞ´µ½ÎÄ¼ş
-	 * 1£©×Ö½ÚÊı×éµ½³ÌĞò ByteArrayInputStream
-	 * 2£©³ÌĞòµ½ÎÄ¼ş OutputStream
+	 * å­—èŠ‚æ•°ç»„å†™åˆ°æ–‡ä»¶
+	 * 1ï¼‰å­—èŠ‚æ•°ç»„åˆ°ç¨‹åº ByteArrayInputStream
+	 * 2ï¼‰ç¨‹åºåˆ°æ–‡ä»¶ OutputStream
 	 */
 	
 	private static void byteArrayToFile(byte[] src,String filePath) {

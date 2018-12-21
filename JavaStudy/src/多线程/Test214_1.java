@@ -1,17 +1,17 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * Ïß³Ì°²È«£º²¢·¢Ê±±£Ö¤Êı¾İµÄÕıÈ·ĞÔ£¬Ğ§ÂÊ¾¡¿ÉÄÜ¸ß
+ * çº¿ç¨‹å®‰å…¨ï¼šå¹¶å‘æ—¶ä¿è¯æ•°æ®çš„æ­£ç¡®æ€§ï¼Œæ•ˆç‡å°½å¯èƒ½é«˜
  * @author jie
  *synchronized
- *1.Í¬²½·½·¨
- *2.Í¬²½¿é
+ *1.åŒæ­¥æ–¹æ³•
+ *2.åŒæ­¥å—
  */
 public class Test214_1 {
 	public static void main(String[] args) {
 		Web1230 test=new Web1230();
-		new Thread(test,"ÏşÏş").start();
-		new Thread(test,"äìäì").start();
-		new Thread(test,"º£º£").start();
+		new Thread(test,"æ™“æ™“").start();
+		new Thread(test,"æ½‡æ½‡").start();
+		new Thread(test,"æµ·æµ·").start();
 	}
 }
 class Web1230 implements Runnable{

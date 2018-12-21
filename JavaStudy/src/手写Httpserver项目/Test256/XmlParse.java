@@ -1,4 +1,4 @@
-package 手写Httpserver项目.Test256;
+package 鎵嬪啓Httpserver椤圭洰.Test256;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -13,28 +13,28 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import 手写Httpserver项目.Test255.Entity;
-import 手写Httpserver项目.Test255.Mapping;
+import 鎵嬪啓Httpserver椤圭洰.Test255.Entity;
+import 鎵嬪啓Httpserver椤圭洰.Test255.Mapping;
 
 public class XmlParse {
 	public static void main(String[] args) throws SAXException, IOException, ParserConfigurationException, ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
-		//SAX解析
-		//1、获取解析工厂
+		//SAX瑙ｆ瀽
+		//1銆佽幏鍙栬В鏋愬伐鍘�
 		SAXParserFactory factory=SAXParserFactory.newInstance();
-		//2、从解析工厂获取解析器
+		//2銆佷粠瑙ｆ瀽宸ュ巶鑾峰彇瑙ｆ瀽鍣�
 		SAXParser parse =factory.newSAXParser();
-		//3、编写处理器
-		//4、加载文档 Document 注册处理器
+		//3銆佺紪鍐欏鐞嗗櫒
+		//4銆佸姞杞芥枃妗Ｂ燚ocument聽娉ㄥ唽澶勭悊鍣�
 		WebHandler handler=new WebHandler();
-		//5、解析
+		//5銆佽В鏋�
 		parse.parse(Thread.currentThread().getContextClassLoader()
-		.getResourceAsStream("手写Httpserver项目/Test255/web.xml")
+		.getResourceAsStream("鎵嬪啓Httpserver椤圭洰/Test255/web.xml")
 		,handler);
 		
-		//获取数据
+		//鑾峰彇鏁版嵁
 		WebContext context=new WebContext(handler.getEntitys(), handler.getMappings());
 		
-		//假设你输入了/login
+		//鍋囪浣犺緭鍏ヤ簡/login
 		String className=context.getClz("/reg");
 		Class clz=Class.forName(className);
 		Servlet servlet=(Servlet)clz.getConstructor().newInstance();
@@ -46,7 +46,7 @@ class WebHandler extends DefaultHandler{
 	private List<Mapping> mappings;
 	private Entity entity;
 	private Mapping mapping;
-	//存储操作标签
+	//瀛樺偍鎿嶄綔鏍囩
 	private String tag;
 	private boolean isMapping=false;
 	@Override
@@ -56,7 +56,7 @@ class WebHandler extends DefaultHandler{
 	}
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-		System.out.println(qName+"-->解析开始");		
+		System.out.println(qName+"-->瑙ｆ瀽寮�濮�");		
 		if(qName!=null) {
 			tag=qName;
 			if(tag!=null) {
@@ -94,7 +94,7 @@ class WebHandler extends DefaultHandler{
 	
 	@Override
 	public void endElement(String uri, String localName, String qName) throws SAXException {
-		System.out.println(qName+"-->解析结束");
+		System.out.println(qName+"-->瑙ｆ瀽缁撴潫");
 		if(qName!=null) {
 			if(qName.equals("servlet-mapping")) {
 				mappings.add(mapping);

@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -13,11 +13,11 @@ import java.io.Reader;
 import java.io.Writer;
 
 /**
- * IOÎÄ¼ş×Ö·ûÁ÷
- * ´´½¨Ô´
- * Ñ¡ÔñÁ÷
- * ²Ù×÷
- * ÊÍ·Å×ÊÔ´
+ * IOæ–‡ä»¶å­—ç¬¦æµ
+ * åˆ›å»ºæº
+ * é€‰æ‹©æµ
+ * æ“ä½œ
+ * é‡Šæ”¾èµ„æº
  * @author jie
  *
  */
@@ -27,14 +27,14 @@ public class Test176 {
 		output();
 	}
 	private static void input() {
-		File file=new File(System.getProperty("user.dir")+"/src/IOÁ÷¼¼Êõ/test.txt");
+		File file=new File(System.getProperty("user.dir")+"/src/IOæµæŠ€æœ¯/test.txt");
 		Reader reader=null;
 		try {
 			reader=new FileReader(file);
-			char[] car=new char[1024]; //»º´æÈİÆ÷
+			char[] car=new char[1024]; //ç¼“å­˜å®¹å™¨
 			int len=-1;
 			while(-1!=(len=reader.read(car))) {
-				//×Ö½ÚÊı×é->×Ö·û´®£¨½âÂë£©
+				//å­—èŠ‚æ•°ç»„->å­—ç¬¦ä¸²ï¼ˆè§£ç ï¼‰
 				System.out.print(new String(car,0,len));
 			}
 		} catch (FileNotFoundException e) {
@@ -53,14 +53,14 @@ public class Test176 {
 		
 	}
 	private static void output() {
-		File file=new File(System.getProperty("user.dir")+"/src/IOÁ÷¼¼Êõ/test2.txt");
+		File file=new File(System.getProperty("user.dir")+"/src/IOæµæŠ€æœ¯/test2.txt");
 		Writer writer=null;
 		try {
-			//FileOutputStream(xx,true) ¸²¸Ç
-			//FileOutputStream(xx,true) ×·¼Ó
+			//FileOutputStream(xx,true) è¦†ç›–
+			//FileOutputStream(xx,true) è¿½åŠ 
 			writer=new FileWriter(file,true);
-			String msg="ÄãºÃ°¡ ½ñÌìÌìÆøºÃºÃ°¡";
-			//×Ö·û´®-->×Ö·ûÊı×é£¨±àÂë£©
+			String msg="ä½ å¥½å•Š ä»Šå¤©å¤©æ°”å¥½å¥½å•Š";
+			//å­—ç¬¦ä¸²-->å­—ç¬¦æ•°ç»„ï¼ˆç¼–ç ï¼‰
 //			char[] datas=msg.toCharArray();
 //			writer.write(datas,0,datas.length);
 			

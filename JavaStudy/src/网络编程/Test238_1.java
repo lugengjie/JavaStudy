@@ -1,4 +1,4 @@
-package 网络编程;
+package 缃戠粶缂栫▼;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -8,15 +8,15 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 /**
- * 爬虫原理
+ * 鐖櫕鍘熺悊
  * @author jie
  *
  */
 public class Test238_1 {
 	public static void main(String[] args) throws Exception {
-		//获取URL
+		//鑾峰彇URL
 		URL url=new URL("https://www.jd.com");
-		//下载资源
+		//涓嬭浇璧勬簮
 		InputStream is=url.openStream();
 		BufferedReader br=new BufferedReader(new InputStreamReader(is,"UTF-8"));
 		String msg=null;

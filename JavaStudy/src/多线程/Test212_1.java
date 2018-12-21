@@ -1,15 +1,15 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * Ïß³Ì²»°²È«£ºÊı¾İÓĞÏàÍ¬£¬ÓĞ¸ºÊı
+ * çº¿ç¨‹ä¸å®‰å…¨ï¼šæ•°æ®æœ‰ç›¸åŒï¼Œæœ‰è´Ÿæ•°
  * @author jie
  *
  */
 public class Test212_1 {
 	public static void main(String[] args) {
 		Web12306 test=new Web12306();
-		new Thread(test,"ÏşÏş").start();
-		new Thread(test,"äìäì").start();
-		new Thread(test,"º£º£").start();
+		new Thread(test,"æ™“æ™“").start();
+		new Thread(test,"æ½‡æ½‡").start();
+		new Thread(test,"æµ·æµ·").start();
 	}
 }
 class Web12306 implements Runnable{

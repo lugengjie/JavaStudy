@@ -1,4 +1,4 @@
-package ÍøÂç±à³Ì;
+package ç½‘ç»œç¼–ç¨‹;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -10,34 +10,34 @@ import java.net.InetSocketAddress;
 import java.net.SocketException;
 
 /**
- * ·¢ËÍ¶Ë
- * 1.Ê¹ÓÃDatagramSocketÖ¸¶¨¶Ë¿Ú ´´½¨·¢ËÍ¶Ë
- * 2.×¼±¸Êı¾İ,Ò»¶¨Òª×ª³É×Ö½ÚÊı×é
- * 3.·â×°³ÉDatagramPacket°ü¹ü,ĞèÒªÖ¸¶¨Ä¿µÄµØ
- * 4.·¢ËÍ°ü¹üsend(DatagramPacket p)
- * 5.ÊÍ·Å×ÊÔ´
+ * å‘é€ç«¯
+ * 1.ä½¿ç”¨DatagramSocketæŒ‡å®šç«¯å£ åˆ›å»ºå‘é€ç«¯
+ * 2.å‡†å¤‡æ•°æ®,ä¸€å®šè¦è½¬æˆå­—èŠ‚æ•°ç»„
+ * 3.å°è£…æˆDatagramPacketåŒ…è£¹,éœ€è¦æŒ‡å®šç›®çš„åœ°
+ * 4.å‘é€åŒ…è£¹send(DatagramPacket p)
+ * 5.é‡Šæ”¾èµ„æº
  * @author jie
  *
  */
 public class Test242_TalkClient {
 	public static void main(String[] args) throws IOException {
-		System.out.println("·¢ËÍ¶ËÆô¶¯ÖĞ.....");
-		//*1.Ê¹ÓÃDatagramSocketÖ¸¶¨¶Ë¿Ú ´´½¨·¢ËÍ¶Ë«¯
+		System.out.println("å‘é€ç«¯å¯åŠ¨ä¸­.....");
+		//*1.ä½¿ç”¨DatagramSocketæŒ‡å®šç«¯å£ åˆ›å»ºå‘é€ç«¯î¬
 		DatagramSocket client=new DatagramSocket(8888);
-		//* 2.×¼±¸Êı¾İ,Ò»¶¨Òª×ª³É×Ö½ÚÊı×é
+		//* 2.å‡†å¤‡æ•°æ®,ä¸€å®šè¦è½¬æˆå­—èŠ‚æ•°ç»„
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		while(true) {
 			String data=br.readLine();
 			byte[] datas=data.getBytes();
-			//* 3.·â×°³ÉDatagramPacket°ü¹ü,ĞèÒªÖ¸¶¨Ä¿µÄµØ
+			//* 3.å°è£…æˆDatagramPacketåŒ…è£¹,éœ€è¦æŒ‡å®šç›®çš„åœ°
 			DatagramPacket packet=new DatagramPacket(datas, 0,datas.length,new InetSocketAddress("localhost",9999));
-			//*4.·¢ËÍ°ü¹üsend(DatagramPacket p)
+			//*4.å‘é€åŒ…è£¹send(DatagramPacket p)
 			client.send(packet);
 			if(data.equals("bye")) {
 				break;
 			}
 		}
-		//* 5.ÊÍ·Å×ÊÔ´
+		//* 5.é‡Šæ”¾èµ„æº
 		client.close();
 	}
 }

@@ -1,20 +1,20 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * Ïß³ÌºÏ²¢£¬²å¶ÓÏß³Ì
+ * çº¿ç¨‹åˆå¹¶ï¼Œæ’é˜Ÿçº¿ç¨‹
  * @author jie
  *
  */
 public class Test207_2 {
 	public static void main(String[] args) throws InterruptedException {
-		System.out.println("ÀÏ°ÖºÍ¶ù×ÓÂòÑÌµÄ¹ÊÊÂ");
+		System.out.println("è€çˆ¸å’Œå„¿å­ä¹°çƒŸçš„æ•…äº‹");
 		new Thread(new Father()).start();
 	}
 }
 class Father implements Runnable{
 	@Override
 	public void run() {
-		System.out.println("Ïë³éÑÌ£¬·¢ÏÖÑÌÃ»ÁË");
-		System.out.println("ÈÃ¶ù×ÓÈ¥ÂòÑÌ");
+		System.out.println("æƒ³æŠ½çƒŸï¼Œå‘ç°çƒŸæ²¡äº†");
+		System.out.println("è®©å„¿å­å»ä¹°çƒŸ");
 		Thread t=new Thread(new Son());
 		t.start();
 		try {
@@ -22,7 +22,7 @@ class Father implements Runnable{
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("°Ö°Ö½Ó¹ıÑÌ£¬°ÑÁãÇ®¸øÁË¶ù×Ó");
+		System.out.println("çˆ¸çˆ¸æ¥è¿‡çƒŸï¼ŒæŠŠé›¶é’±ç»™äº†å„¿å­");
 		
 	}
 }
@@ -30,17 +30,17 @@ class Son implements Runnable{
 
 	@Override
 	public void run() {
-		System.out.println("½Ó¹ıÀÏ°ÖµÄÇ®³öÈ¥ÁË");
-		System.out.println("Â·±ßÓĞ¸öÓÎÏ·Ìü,ÍæÁË10Ãë");
+		System.out.println("æ¥è¿‡è€çˆ¸çš„é’±å‡ºå»äº†");
+		System.out.println("è·¯è¾¹æœ‰ä¸ªæ¸¸æˆå…,ç©äº†10ç§’");
 		for(int i=0;i<10;i++) {
-			System.out.println(i+"Ãë");
+			System.out.println(i+"ç§’");
 		}
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("¸Ï½ôÂòÑÌÈ¥");
+		System.out.println("èµ¶ç´§ä¹°çƒŸå»");
 		
 	}
 	

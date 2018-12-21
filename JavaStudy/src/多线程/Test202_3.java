@@ -1,12 +1,12 @@
-package ¶àÏß³Ì;
-//lambdaÍÆµ¼+¼Ó²ÎÊý
+package å¤šçº¿ç¨‹;
+//lambdaæŽ¨å¯¼+åŠ å‚æ•°
 public class Test202_3 {
 	public static void main(String[] args) {
 		ILove love=(int a)->{
 			System.out.println(a);
 		};
 		love.lambda(1);
-		//¼ò»¯
+		//ç®€åŒ–
 		love=(a)->{
 			System.out.println(a);
 		};

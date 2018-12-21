@@ -1,32 +1,32 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
  * happenbefore
- * Ö¸ÁîÖØÅÅ£º´úÂëÖ´ĞĞË³ĞòÓëÔ¤ÆÚ²»Ò»ÖÂ
- * Ä¿µÄ£ºÌá¸ßĞÔÄÜ
+ * æŒ‡ä»¤é‡æ’ï¼šä»£ç æ‰§è¡Œé¡ºåºä¸é¢„æœŸä¸ä¸€è‡´
+ * ç›®çš„ï¼šæé«˜æ€§èƒ½
  * @author jie
  *
  */
 public class Test226 {
-	//±äÁ¿1
+	//å˜é‡1
 	static int a=0;
-	//±äÁ¿2
+	//å˜é‡2
 	static boolean flag=false;
 	public static void main(String[] args) throws InterruptedException {
 		for(int i=0;i<10;i++) {
 			 a=0;
 			 flag=false;
 			 
-			 //Ïß³Ì1¸ü¸ÄÊı¾İ
+			 //çº¿ç¨‹1æ›´æ”¹æ•°æ®
 			 Thread t1 = new Thread(()->{
 				a=1;
 				flag=true;
 			});
-			 //Ïß³Ì2 ¶ÁÈ¡Êı¾İ
+			 //çº¿ç¨‹2 è¯»å–æ•°æ®
 			Thread t2=new Thread(()-> {
 				if(flag) {
 					a*=1;
 				}
-				//Ö¸ÁîÖØÅÅ
+				//æŒ‡ä»¤é‡æ’
 				if(a==0) {
 					System.out.println("happen before a->"+a);
 				}

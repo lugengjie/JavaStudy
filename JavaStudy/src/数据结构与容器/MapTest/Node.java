@@ -1,4 +1,4 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.MapTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.MapTest;
 
 public class Node {
 	int hash;

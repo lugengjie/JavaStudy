@@ -15,7 +15,7 @@
  * 
  */
  
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 
 import static org.quartz.DateBuilder.evenSecondDateAfterNow;
 import static org.quartz.JobBuilder.newJob;
@@ -30,7 +30,7 @@ import org.quartz.impl.StdSchedulerFactory;
 
 import java.util.Date;
 /**
- * quartzÑ§Ï°ÈëÃÅ
+ * quartzå­¦ä¹ å…¥é—¨
  * @author jie
  *
  */
@@ -39,22 +39,22 @@ public class SimpleExample {
   public void run() throws Exception {
   
 
-	//1.´´½¨scheduler¹¤³§
+	//1.åˆ›å»ºschedulerå·¥å‚
     SchedulerFactory sf = new StdSchedulerFactory();
-    //2.´Ó¹¤³§ÖĞ»ñÈ¡µ÷¶ÈÆ÷
+    //2.ä»å·¥å‚ä¸­è·å–è°ƒåº¦å™¨
     Scheduler sched = sf.getScheduler();
-    // 3.´´½¨JobDetail
+    // 3.åˆ›å»ºJobDetail
     JobDetail job = newJob(HelloJob.class).withIdentity("job1", "group1").build();
-    //Ê±¼ä
+    //æ—¶é—´
     Date runTime = evenSecondDateAfterNow();
-    //4.´¥·¢Æ÷
+    //4.è§¦å‘å™¨
     Trigger trigger = newTrigger().withIdentity("trigger1", "group1").startAt(runTime).build();
-    //5.×¢²áÈÎÎñºÍ´¥·¢Ìõ¼ş
+    //5.æ³¨å†Œä»»åŠ¡å’Œè§¦å‘æ¡ä»¶
     sched.scheduleJob(job, trigger);
     //6.start
     sched.start();
     try {
-      //5ÃëºóÍ£Ö¹
+      //5ç§’ååœæ­¢
       Thread.sleep(5L * 1000L);
     } catch (Exception e) {
     }

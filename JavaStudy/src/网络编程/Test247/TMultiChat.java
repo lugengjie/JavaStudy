@@ -1,4 +1,4 @@
-package ÍøÂç±à³Ì.Test247;
+package ç½‘ç»œç¼–ç¨‹.Test247;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -7,23 +7,23 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * ÔÚÏßÁÄÌìÊÒ£º·şÎñÆ÷
- * Ä¿±ê£º·â×°Ê¹ÓÃ¶àÏß³ÌÊµÏÖ¶à¸öÓÃ»§¿ÉÒÔÕı³£ÊÕ·¢¶àÌõÏûÏ¢
+ * åœ¨çº¿èŠå¤©å®¤ï¼šæœåŠ¡å™¨
+ * ç›®æ ‡ï¼šå°è£…ä½¿ç”¨å¤šçº¿ç¨‹å®ç°å¤šä¸ªç”¨æˆ·å¯ä»¥æ­£å¸¸æ”¶å‘å¤šæ¡æ¶ˆæ¯
  * @author jie
  *
  */
 public class TMultiChat {
 	public static void main(String[] args) throws IOException {
 		System.out.println("------Service------");
-		// * 1.Ö¸¶¨¶Ë¿Ú Ê¹ÓÃServiceSocket´´½¨·şÎñÆ÷
+		// * 1.æŒ‡å®šç«¯å£ ä½¿ç”¨ServiceSocketåˆ›å»ºæœåŠ¡å™¨
 		ServerSocket server=new ServerSocket(8888);
-		// * 2.×èÈûÊ½µÈ´ıÁ¬½Ó accept
+		// * 2.é˜»å¡å¼ç­‰å¾…è¿æ¥ accept
 		while(true) {
 			Socket client = server.accept();
 			new Thread(new Channel(client)).start();
 		}
 	}
-	//Ò»¸ö¿Í»§¶Ë´ú±íÒ»¸öChannel
+	//ä¸€ä¸ªå®¢æˆ·ç«¯ä»£è¡¨ä¸€ä¸ªChannel
 	static class Channel implements Runnable{
 		private DataInputStream dis;
 		private DataOutputStream dos;
@@ -47,35 +47,35 @@ public class TMultiChat {
 				this.dos=new DataOutputStream(client.getOutputStream());
 				this.isRunning=true;
 			} catch (IOException e) {
-				System.out.println("------¹¹ÔìÆ÷------");
+				System.out.println("------æ„é€ å™¨------");
 				release();
 			}	
 			
 		}
-		//½ÓÊÕÏûÏ¢
+		//æ¥æ”¶æ¶ˆæ¯
 		private String receive() {
 			String msg="";
 			try {
 				msg=dis.readUTF();
 			} catch (IOException e) {
-				System.out.println("------½ÓÊÕ------");
+				System.out.println("------æ¥æ”¶------");
 				release();
 			}
 			return msg;
 		}
-		//·¢ËÍÏûÏ¢
+		//å‘é€æ¶ˆæ¯
 		private void send(String msg) {
 			try {
 				dos.writeUTF(msg);
 				dos.flush();
 			} catch (IOException e) {
-				System.out.println("------·¢ËÍ------");
+				System.out.println("------å‘é€------");
 				release();
 			}
 			
 
 		}
-		//ÊÍ·Å×ÊÔ´
+		//é‡Šæ”¾èµ„æº
 		private void release() {
 			this.isRunning=false;
 			Utils.close(dos,dis,client);

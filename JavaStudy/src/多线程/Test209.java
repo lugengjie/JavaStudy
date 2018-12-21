@@ -1,7 +1,7 @@
-package ╤ЮоъЁл;
+package Е╓ Г╨©Г╗▀;
 /**
- * оъЁлсеох╪╤
- * 1.NORM_PRIORITY 5д╛хо
+ * Г╨©Г╗▀Д╪≤Е┘┬Г╨╖
+ * 1.NORM_PRIORITY 5И╩≤Х╝╓
  * 2.MIN_PRIORITY 1
  * 3.MAX_PRIORITY 10
  * @author jie

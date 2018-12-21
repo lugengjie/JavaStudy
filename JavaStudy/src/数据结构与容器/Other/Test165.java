@@ -1,10 +1,10 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.Other;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.Other;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ±í¸ñÊı¾İ´æ´¢
+ * è¡¨æ ¼æ•°æ®å­˜å‚¨
  * javabean,List
  * @author jie
  *

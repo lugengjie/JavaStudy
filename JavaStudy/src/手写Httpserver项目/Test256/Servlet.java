@@ -1,4 +1,4 @@
-package ÊÖĞ´HttpserverÏîÄ¿.Test256;
+package æ‰‹å†™Httpserveré¡¹ç›®.Test256;
 
 public interface Servlet {
 	public void service();

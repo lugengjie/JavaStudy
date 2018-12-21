@@ -1,7 +1,7 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * ÆäËû·½·¨
- * isAlive£¨£©
+ * å…¶ä»–æ–¹æ³•
+ * isAliveï¼ˆï¼‰
  * setName()
  * Thread.currentThread()
  * @author jie
@@ -9,10 +9,10 @@ package ¶àÏß³Ì;
  */
 public class Test211 {
 	public static void main(String[] args) throws InterruptedException {
-		Test test=new Test("Õ½¶·»ú");
+		Test test=new Test("æˆ˜æ–—æœº");
 		Thread t=new Thread(test);
-		//ÉèÖÃÕæÊµ½ÇÉ«ºÍ´úÀí½ÇÉ«Ãû³Æ
-		t.setName("³ÌĞòÔ±");
+		//è®¾ç½®çœŸå®è§’è‰²å’Œä»£ç†è§’è‰²åç§°
+		t.setName("ç¨‹åºå‘˜");
 		t.start();
 		t.sleep(1000);
 		System.out.println(t.isAlive());
@@ -27,7 +27,7 @@ class Test implements Runnable{
 
 	@Override
 	public void run() {
-		System.out.println(name+"--¡·"+Thread.currentThread().getName());
+		System.out.println(name+"--ã€‹"+Thread.currentThread().getName());
 		
 	}
 	

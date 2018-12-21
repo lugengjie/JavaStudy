@@ -1,6 +1,6 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * ¿ÉÖØÈëËø£ºËø¿ÉÒÔÑÓĞøÊ¹ÓÃ
+ * å¯é‡å…¥é”ï¼šé”å¯ä»¥å»¶ç»­ä½¿ç”¨
  * @author jie
  *
  */
@@ -9,10 +9,10 @@ public class Test230_1 {
 		new Test230_1().test();
 	}
 	public void test() {
-		// µÚÒ»´Î»ñÈ¡Ëø
+		// ç¬¬ä¸€æ¬¡è·å–é”
 		synchronized(this) {
 			while(true) {
-				//µÚ¶ş´Î»ñÈ¡Ëø
+				//ç¬¬äºŒæ¬¡è·å–é”
 				synchronized (this) {
 					System.out.println("ReentrantLock");
 				}

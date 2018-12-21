@@ -1,4 +1,4 @@
-package 网络编程.Test242;
+package 缃戠粶缂栫▼.Test242;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,9 +32,9 @@ public class TalkSend implements Runnable{
 			try {
 				data = br.readLine();
 				byte[] datas=data.getBytes();
-				//* 3.封装成DatagramPacket包裹,需要指定目的地
+				//* 3.灏佽鎴怐atagramPacket鍖呰９,闇�瑕佹寚瀹氱洰鐨勫湴
 				DatagramPacket packet=new DatagramPacket(datas, 0,datas.length,new InetSocketAddress(toIp,toPort));
-				//*4.发送包裹send(DatagramPacket p)
+				//*4.鍙戦�佸寘瑁箂end(DatagramPacket p)
 				client.send(packet);
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -43,7 +43,7 @@ public class TalkSend implements Runnable{
 				break;
 			}
 		}
-		//* 5.释放资源
+		//* 5.閲婃斁璧勬簮
 		client.close();
 	}
 	

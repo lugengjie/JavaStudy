@@ -1,4 +1,4 @@
-package 网络编程.Test242;
+package 缃戠粶缂栫▼.Test242;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -20,16 +20,16 @@ public class TalkReceive implements Runnable {
 	@Override
 	public void run() {
 			while(true) {
-				//* 2.准备容器封装成DatagramPacket包裹
+				//* 2.鍑嗗瀹瑰櫒灏佽鎴怐atagramPacket鍖呰９
 				byte[] container=new byte[1024*60];
 				DatagramPacket packet=new DatagramPacket(container, 0,container.length);
-				//* 3.阻塞式接收包裹receive(DatagramPacket p)
+				//* 3.闃诲寮忔帴鏀跺寘瑁箁eceive(DatagramPacket p)
 				try {
 					server.receive(packet);
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				//* 4.分析数据
+				//* 4.鍒嗘瀽鏁版嵁
 				//* byte[] getData()
 				//* 	   getLength()
 				byte[] datas=packet.getData();
@@ -40,7 +40,7 @@ public class TalkReceive implements Runnable {
 					break;
 				}
 		}
-		//* 5.释放资源
+		//* 5.閲婃斁璧勬簮
 		server.close();
 	}
 

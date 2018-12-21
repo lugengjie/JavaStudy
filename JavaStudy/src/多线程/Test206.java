@@ -1,6 +1,6 @@
-package ���߳�;
+package 多线程;
 /**
- * �����߳�yield,��ͣ�̣߳�ֱ�ӽ������״̬����������״̬
+ * 礼让线程yield,暂停线程，直接进入就绪状态，不是阻塞状态
  * @author jie
  *
  */

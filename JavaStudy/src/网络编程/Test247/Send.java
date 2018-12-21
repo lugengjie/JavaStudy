@@ -1,4 +1,4 @@
-package ÍøÂç±à³Ì.Test247;
+package ç½‘ç»œç¼–ç¨‹.Test247;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.net.Socket;
 
 /**
- * Ê¹ÓÃ¶àÏß³Ì·â×° ·¢ËÍ¶Ë
+ * ä½¿ç”¨å¤šçº¿ç¨‹å°è£… å‘é€ç«¯
  * @author jie
  *
  */
@@ -32,7 +32,7 @@ public class Send implements Runnable {
 			send(name);
 			
 		} catch (IOException e) {
-			System.out.println("-----·¢ËÍ¹¹ÔìÆ÷´íÎó-------");
+			System.out.println("-----å‘é€æ„é€ å™¨é”™è¯¯-------");
 			release();
 		}
 	}
@@ -42,7 +42,7 @@ public class Send implements Runnable {
 				dos.writeUTF(msg);
 			}
 		} catch (IOException e) {
-			System.out.println("-----·¢ËÍ´íÎó-------");
+			System.out.println("-----å‘é€é”™è¯¯-------");
 			release();
 		}
 		

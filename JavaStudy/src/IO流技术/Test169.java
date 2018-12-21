@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.File;
 
@@ -10,8 +10,8 @@ public class Test169 {
 		
 	}
 	/**
-	 * mkdir:ÉÏ¼¶Ä¿Â¼²»´æÔÚ£¬´´½¨Ê§°Ü
-	 * mkdirs:ÉÏ¼¶Ä¿Â¼¿ÉÒÔ²»´æÔÚ£¬²»´æÔÚÒ»Æğ´´½¨
+	 * mkdir:ä¸Šçº§ç›®å½•ä¸å­˜åœ¨ï¼Œåˆ›å»ºå¤±è´¥
+	 * mkdirs:ä¸Šçº§ç›®å½•å¯ä»¥ä¸å­˜åœ¨ï¼Œä¸å­˜åœ¨ä¸€èµ·åˆ›å»º
 	 */
 	private static void demo1() {
 		File file=new File(System.getProperty("user.dir")+"/src/test");
@@ -19,9 +19,9 @@ public class Test169 {
 		System.out.println(flag);
 	}
 	/**
-	 * list():ÁĞ³öÏÂ¼¶Ãû³Æ
-	 * listFiles():ÁĞ³öÏÂ¼¶File¶ÔÏó
-	 * listRoots():ËùÓĞÅÌ·û
+	 * list():åˆ—å‡ºä¸‹çº§åç§°
+	 * listFiles():åˆ—å‡ºä¸‹çº§Fileå¯¹è±¡
+	 * listRoots():æ‰€æœ‰ç›˜ç¬¦
 	 */
 	private static void demo2() {
 		File file=new File(System.getProperty("user.dir"));
@@ -41,9 +41,9 @@ public class Test169 {
 		}
 	}
 	/**
-	 * µİ¹é£º×Ô¼ºµ÷ÓÃ×Ô¼º
-	 * µİ¹éÍ·£º½áÊøµ÷ÓÃ
-	 * µİ¹éÌå£ºÖØ¸´µ÷ÓÃ
+	 * é€’å½’ï¼šè‡ªå·±è°ƒç”¨è‡ªå·±
+	 * é€’å½’å¤´ï¼šç»“æŸè°ƒç”¨
+	 * é€’å½’ä½“ï¼šé‡å¤è°ƒç”¨
 	 */
 	private static void demo3(int n) {
 		if(n>10) return;

@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -11,11 +11,11 @@ import java.io.OutputStreamWriter;
 import java.net.URL;
 
 /**
- * ×ª»»Á÷
+ * è½¬æ¢æµ
  * InputStreamReader()
  * OutputStreamWriter()
- * ½«×Ö½ÚÁ÷×ª»»Îª×Ö·ûÁ÷
- * Ö¸¶¨×Ö·û¼¯
+ * å°†å­—èŠ‚æµè½¬æ¢ä¸ºå­—ç¬¦æµ
+ * æŒ‡å®šå­—ç¬¦é›†
  * @author jie
  *
  */
@@ -24,35 +24,35 @@ public class Test183 {
 		demo1();
 	}
 	/**
-	 * ÊäÈëÊä³öÁ÷
+	 * è¾“å…¥è¾“å‡ºæµ
 	 * System.in System.out
 	 */
 	public static void demo1() {
 		try(BufferedReader br=new BufferedReader(new InputStreamReader(new URL("http://www.baidu.com").openStream(),"UTF-8"));
-		BufferedWriter bw=new BufferedWriter(new FileWriter("src/IOÁ÷¼¼Êõ/baidu.txt"));){
+		BufferedWriter bw=new BufferedWriter(new FileWriter("src/IOæµæŠ€æœ¯/baidu.txt"));){
 			String line="";
 			while((line=br.readLine())!=null) {
-				bw.write(line); //Ñ­»·Ğ´³ö
+				bw.write(line); //å¾ªç¯å†™å‡º
 				bw.newLine();
-				bw.flush(); //Ç¿ÖÆË¢ĞÂ
+				bw.flush(); //å¼ºåˆ¶åˆ·æ–°
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 	/**
-	 * ÍøÂçÁ÷
+	 * ç½‘ç»œæµ
 	 */
 	private static  void demo2() {
 		try(BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out));){
-			//Ñ­»·»ñÈ¡¼üÅÌµÄÊäÈë(exitÍË³ö)£¬Êä³ö´ËÄÚÈİ
+			//å¾ªç¯è·å–é”®ç›˜çš„è¾“å…¥(exité€€å‡º)ï¼Œè¾“å‡ºæ­¤å†…å®¹
 			String msg ="";
 			while(!msg.equals("exit")) {
-				msg = br.readLine(); //Ñ­»·¶ÁÈ¡
-				bw.write(msg); //Ñ­»·Ğ´³ö
+				msg = br.readLine(); //å¾ªç¯è¯»å–
+				bw.write(msg); //å¾ªç¯å†™å‡º
 				bw.newLine();
-				bw.flush(); //Ç¿ÖÆË¢ĞÂ
+				bw.flush(); //å¼ºåˆ¶åˆ·æ–°
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

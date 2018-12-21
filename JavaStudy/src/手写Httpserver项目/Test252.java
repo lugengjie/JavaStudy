@@ -1,28 +1,28 @@
-package ÊÖĞ´HttpserverÏîÄ¿;
+package æ‰‹å†™Httpserveré¡¹ç›®;
 
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * ·´Éä£º°ÑjavaÖĞµÄ¸÷ÖÖ½á¹¹£¨·½·¨¡¢ÊôĞÔ¡¢¹¹ÔìÆ÷¡¢ÀàÃû)Ó³Éä³ÉÒ»¸ö¸öµÄjava¶ÔÏó
- * 1¡¢»ñÈ¡Class¶ÔÏó
- * ÈıÖÖ·½Ê½£ºClass.forName("°üÃû.ÀàÃû")
- * 2¡¢¿ÉÒÔ¶¯Ì¬´´½¨¶ÔÏó
+ * åå°„ï¼šæŠŠjavaä¸­çš„å„ç§ç»“æ„ï¼ˆæ–¹æ³•ã€å±æ€§ã€æ„é€ å™¨ã€ç±»å)æ˜ å°„æˆä¸€ä¸ªä¸ªçš„javaå¯¹è±¡
+ * 1ã€è·å–Classå¯¹è±¡
+ * ä¸‰ç§æ–¹å¼ï¼šClass.forName("åŒ…å.ç±»å")
+ * 2ã€å¯ä»¥åŠ¨æ€åˆ›å»ºå¯¹è±¡
  * temp.getConstructor().newInstance()
  * @author jie
  *
  */
 public class Test252 {
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
-		//ÈıÖÖ·½Ê½
-		//1.¶ÔÏógetClass()
+		//ä¸‰ç§æ–¹å¼
+		//1.å¯¹è±¡getClass()
 		IPhone iphone=new IPhone();
 		Class temp=iphone.getClass();
-		//2.Àà.class
+		//2.ç±».class
 		temp=IPhone.class;
-		//3.Class.forName("°üÃû.ÀàÃû")
-		temp=Class.forName("ÊÖĞ´HttpserverÏîÄ¿.IPhone");
+		//3.Class.forName("åŒ…å.ç±»å")
+		temp=Class.forName("æ‰‹å†™Httpserveré¡¹ç›®.IPhone");
 		
-		//´´½¨¶ÔÏó
+		//åˆ›å»ºå¯¹è±¡
 		IPhone iphone2=(IPhone)temp.getConstructor().newInstance();
 		System.out.println(iphone2);
 	}

@@ -1,6 +1,6 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * ThreadLocalÃ¿¸öÏß³Ì×ÔÉíµÄ±¾µØ´æ´¢,¾Ö²¿ÇøÓò
+ * ThreadLocalæ¯ä¸ªçº¿ç¨‹è‡ªèº«çš„æœ¬åœ°å­˜å‚¨,å±€éƒ¨åŒºåŸŸ
  * get/set/initialValue
  * @author jie
  *

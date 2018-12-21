@@ -1,6 +1,6 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * InheritableThreadLocal¼Ì³ĞÉÏÏÂÎÄ»·¾³µÄÊı¾İ£¬¿½±´Ò»·İ¸ø×ÓÏß³Ì
+ * InheritableThreadLocalç»§æ‰¿ä¸Šä¸‹æ–‡ç¯å¢ƒçš„æ•°æ®ï¼Œæ‹·è´ä¸€ä»½ç»™å­çº¿ç¨‹
  * @author jie
  *
  */

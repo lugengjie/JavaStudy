@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class Test168 {
 	}
 	/**
 	 * getName()
-	 * getPath() ¾ø¶Ô»òÏà¶Ô
+	 * getPath() ç»å¯¹æˆ–ç›¸å¯¹
 	 * getAbsolutePath()
 	 * getParent()
 	 * getParentFile()
@@ -32,29 +32,29 @@ public class Test168 {
 		System.out.println(file.getParentFile().getName());
 	}
 	/**
-	 * ÎÄ¼ş×´Ì¬
+	 * æ–‡ä»¶çŠ¶æ€
 	 * exist()
-	 * ´æÔÚ
+	 * å­˜åœ¨
 	 * isFile()
 	 * isDirectory()
 	 */
 	private static void demo02() {
 		File file=new File("src");
 		if(null!=file&&file.exists()) {
-			System.out.println("ÎÄ¼ş´æÔÚ");
+			System.out.println("æ–‡ä»¶å­˜åœ¨");
 			if(file.isFile()) {
-				System.out.println("ÎÄ¼ş");
+				System.out.println("æ–‡ä»¶");
 			}
 			if(file.isDirectory()) {
-				System.out.println("ÎÄ¼ş¼Ğ");
+				System.out.println("æ–‡ä»¶å¤¹");
 			}
 		}else {
-			System.out.println("ÎÄ¼ş²»´æÔÚ");
+			System.out.println("æ–‡ä»¶ä¸å­˜åœ¨");
 		}
 	}
 	/**
 	 * length()
-	 * Ä¿Â¼»òÎŞ´ËÎÄ¼ş·µ»Ø0
+	 * ç›®å½•æˆ–æ— æ­¤æ–‡ä»¶è¿”å›0
 	 */
 	private static void demo03() {
 		File file1=new File("C:/Users/jie/git/JavaStudy/JavaStudy/src/03.jpeg");
@@ -64,7 +64,7 @@ public class Test168 {
 
 	}
 	/**
-	 * createFile() ²»´æÔÚ²Å´´½¨,´æÔÚ´´½¨Ê§°Ü
+	 * createFile() ä¸å­˜åœ¨æ‰åˆ›å»º,å­˜åœ¨åˆ›å»ºå¤±è´¥
 	 * delete()
 	 * @throws IOException 
 	 */
@@ -80,7 +80,7 @@ public class Test168 {
 //		flag=file1.delete();
 //		System.out.println(flag);
 		
-		//²»´øºó×º´´½¨²»´øºó×ºµÄÎÄ¼ş£¬²»ÊÇÎÄ¼ş¼Ğ
+		//ä¸å¸¦åç¼€åˆ›å»ºä¸å¸¦åç¼€çš„æ–‡ä»¶ï¼Œä¸æ˜¯æ–‡ä»¶å¤¹
 //		File file2=new File("D:/NaNa/test");
 //		try {
 //			file2.createNewFile();
@@ -89,7 +89,7 @@ public class Test168 {
 //		}
 //		file2.delete();
 		
-		//²¹³äcom3,cn,com3.....²Ù×÷ÏµÍ³Éè±¸Ãû²»ÄÜ´´½¨
+		//è¡¥å……com3,cn,com3.....æ“ä½œç³»ç»Ÿè®¾å¤‡åä¸èƒ½åˆ›å»º
 		File file3=new File("D:/NaNa/com3");
 		boolean flag=false;
 		try {

@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -7,11 +7,11 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * IO×Ö½ÚÊý×éÁ÷
- * ´´½¨Ô´
- * Ñ¡ÔñÁ÷
- * ²Ù×÷
- * ÊÍ·Å×ÊÔ´
+ * IOå­—èŠ‚æ•°ç»„æµ
+ * åˆ›å»ºæº
+ * é€‰æ‹©æµ
+ * æ“ä½œ
+ * é‡Šæ”¾èµ„æº
  * @author jie
  *
  */
@@ -21,21 +21,21 @@ public class Test177 {
 		output();
 	}
 	/**
-	 * ×Ö½ÚÊý×éÊäÈëÁ÷£ºByteArrayInputStream
-	 * ´´½¨Ô´£º×Ö½ÚÊý×é²»ÒªÌ«´ó
-	 * Ñ¡ÔñÁ÷
-	 * ²Ù×÷
-	 * ÊÍ·Å×ÊÔ´£º½»¸øJVM,²»ÓÃ´¦Àí
+	 * å­—èŠ‚æ•°ç»„è¾“å…¥æµï¼šByteArrayInputStream
+	 * åˆ›å»ºæºï¼šå­—èŠ‚æ•°ç»„ä¸è¦å¤ªå¤§
+	 * é€‰æ‹©æµ
+	 * æ“ä½œ
+	 * é‡Šæ”¾èµ„æºï¼šäº¤ç»™JVM,ä¸ç”¨å¤„ç†
 	 */
 	private static void input() {
 		byte[] datas="talk is cheap show me the code".getBytes();
 		InputStream input=null;
 		try {
 			input=new ByteArrayInputStream(datas);
-			byte[] car=new byte[1024]; //»º´æÈÝÆ÷
+			byte[] car=new byte[1024]; //ç¼“å­˜å®¹å™¨
 			int len=-1;
 			while(-1!=(len=input.read(car))) {
-				//×Ö½ÚÊý×é->×Ö·û´®£¨½âÂë£©
+				//å­—èŠ‚æ•°ç»„->å­—ç¬¦ä¸²ï¼ˆè§£ç ï¼‰
 				System.out.print(new String(car,0,len));
 			}
 		}  catch (IOException e) {
@@ -52,24 +52,24 @@ public class Test177 {
 		
 	}
 	/**
-	 * ×Ö½ÚÊý×éÊäÈëÁ÷£ºByteArrayOutputStream
-	 * ´´½¨Ô´£ºJVMÎ¬»¤
-	 * Ñ¡ÔñÁ÷£º²»¹ØÁªÔ´
-	 * ²Ù×÷£º
-	 * ÊÍ·Å×ÊÔ´£º½»¸øJVM,²»ÓÃ´¦Àí
-	 * »ñÈ¡Êý¾Ý£ºtoByteArray()  
+	 * å­—èŠ‚æ•°ç»„è¾“å…¥æµï¼šByteArrayOutputStream
+	 * åˆ›å»ºæºï¼šJVMç»´æŠ¤
+	 * é€‰æ‹©æµï¼šä¸å…³è”æº
+	 * æ“ä½œï¼š
+	 * é‡Šæ”¾èµ„æºï¼šäº¤ç»™JVM,ä¸ç”¨å¤„ç†
+	 * èŽ·å–æ•°æ®ï¼štoByteArray()  
 	 */
 	private static void output() {
-		//´´½¨Ô´
+		//åˆ›å»ºæº
 		byte[] dest=null;
-		//Ñ¡ÔñÁ÷
+		//é€‰æ‹©æµ
 		ByteArrayOutputStream output=null;
 		try {
 			output=new ByteArrayOutputStream();
-			//²Ù×÷£¨Ð´³ö£©
+			//æ“ä½œï¼ˆå†™å‡ºï¼‰
 			output.write("talk is cheap show me the code".getBytes());
 			output.flush();
-			//»ñÈ¡Êý¾Ý
+			//èŽ·å–æ•°æ®
 			dest=output.toByteArray();
 			System.out.println(dest.length+"-->"+new String(dest,0,dest.length));
 			

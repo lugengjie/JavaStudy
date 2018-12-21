@@ -1,7 +1,7 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.MapTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.MapTest;
 /**
  * get(key)
- * ²éÕÒ¼üÖµ¶Ô
+ * æŸ¥æ‰¾é”®å€¼å¯¹
  * @author jie
  *
  */
@@ -34,7 +34,7 @@ public class Test154 {
 		Node temp=table[newNode.hash];
 		
 		if(temp==null) {
-			//´Ë´¦Êı×éÔªËØÎª¿Õ£¬Ö±½Ó½«ÔªËØ·Å½øÈ¥
+			//æ­¤å¤„æ•°ç»„å…ƒç´ ä¸ºç©ºï¼Œç›´æ¥å°†å…ƒç´ æ”¾è¿›å»
 			table[newNode.hash]=newNode;
 			size++;
 		}else {
@@ -70,9 +70,9 @@ public class Test154 {
 
 	}
 	private int hash(int v,int length) {
-		//È¡Ä£ÔËËã
+		//å–æ¨¡è¿ç®—
 //		System.out.println("hash:"+(v%length));
-		//Î»ÔËËã£¬Ğ§ÂÊ¸ß
+		//ä½è¿ç®—ï¼Œæ•ˆç‡é«˜
 		//System.out.println("hash:"+(v&(length-1)));
 		return v&(length-1);
 	}
@@ -84,7 +84,7 @@ public class Test154 {
 		map.put(30,"cc");
 //		System.out.println(map);
 //		for(int i=0;i<100;i++) {
-//			System.out.print(i+"µÄhash:");
+//			System.out.print(i+"çš„hash:");
 //			map.put(i+"","test");
 //		}
 //		4 15 26

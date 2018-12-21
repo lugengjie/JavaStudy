@@ -1,29 +1,29 @@
-package ÍøÂç±à³Ì;
+package ç½‘ç»œç¼–ç¨‹;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 /**
- * InetAddress¶à¸ö¾²Ì¬·½·¨
- * getLocalHost:±¾»ú
- * getByName:¸ù¾İÓòÃûDNS|ipµØÖ·--¡·ip
+ * InetAddresså¤šä¸ªé™æ€æ–¹æ³•
+ * getLocalHost:æœ¬æœº
+ * getByName:æ ¹æ®åŸŸåDNS|ipåœ°å€--ã€‹ip
  * @author jie
- * Á½¸ö³ÉÔ±·½·¨
- * getHostAddress:·µ»ØµØÖ·
- * getHostName:·µ»Ø¼ÆËã»úÃû
+ * ä¸¤ä¸ªæˆå‘˜æ–¹æ³•
+ * getHostAddress:è¿”å›åœ°å€
+ * getHostName:è¿”å›è®¡ç®—æœºå
  */
 public class Test235 {
 	public static void main(String[] args) throws UnknownHostException {
-		//Ê¹ÓÃgetLocalHost·½·¨´´½¨InetAddress¶ÔÏó
+		//ä½¿ç”¨getLocalHostæ–¹æ³•åˆ›å»ºInetAddresså¯¹è±¡
 		InetAddress ia=InetAddress.getLocalHost();
-		System.out.println(ia.getHostAddress()); //Êä³öIPµØÖ·
-		System.out.println(ia.getHostName()); //Êä³ö¼ÆËã»úÃû
+		System.out.println(ia.getHostAddress()); //è¾“å‡ºIPåœ°å€
+		System.out.println(ia.getHostName()); //è¾“å‡ºè®¡ç®—æœºå
 		
-		//¸ù¾İÓòÃûµÃµ½InetAddress¶ÔÏó
+		//æ ¹æ®åŸŸåå¾—åˆ°InetAddresså¯¹è±¡
 		ia=InetAddress.getByName("www.shsxt.com");
 		System.out.println(ia.getHostAddress());
 		System.out.println(ia.getHostName());
 		
-		//¸ù¾İIpµÃµ½InetAddress¶ÔÏó
+		//æ ¹æ®Ipå¾—åˆ°InetAddresså¯¹è±¡
 		ia=InetAddress.getByName("169.254.53.180");
 		System.out.println(ia.getHostAddress());
 		System.out.println(ia.getHostName());

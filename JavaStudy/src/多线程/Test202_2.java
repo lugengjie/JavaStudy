@@ -1,11 +1,11 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 
 public class Test202_2 {
-	//¾²Ì¬ÄÚ²¿Àà
+	//é™æ€å†…éƒ¨ç±»
 	static class Test2 implements ITest{
 		@Override
 		public void test() {
-			System.out.println("±»±ğÈË±§±§£¬ºåºåÊÇÊ²Ã´¸Ğ¾õ2");
+			System.out.println("è¢«åˆ«äººæŠ±æŠ±ï¼Œå“„å“„æ˜¯ä»€ä¹ˆæ„Ÿè§‰2");
 		}
 	}
 	public static void main(String[] args) {
@@ -14,26 +14,26 @@ public class Test202_2 {
 		
 		test=new Test2();
 		test.test();
-		//¾Ö²¿ÄÚ²¿Àà
+		//å±€éƒ¨å†…éƒ¨ç±»
 		class Test3 implements ITest{
 			@Override
 			public void test() {
-				System.out.println("±»±ğÈË±§±§£¬ºåºåÊÇÊ²Ã´¸Ğ¾õ3");
+				System.out.println("è¢«åˆ«äººæŠ±æŠ±ï¼Œå“„å“„æ˜¯ä»€ä¹ˆæ„Ÿè§‰3");
 			}
 		}
 		test=new Test3();
 		test.test();
-		//ÄäÃûÄÚ²¿Àà
+		//åŒ¿åå†…éƒ¨ç±»
 		test=new ITest() {
 			public void test() {
-				System.out.println("±»±ğÈË±§±§£¬ºåºåÊÇÊ²Ã´¸Ğ¾õ4");
+				System.out.println("è¢«åˆ«äººæŠ±æŠ±ï¼Œå“„å“„æ˜¯ä»€ä¹ˆæ„Ÿè§‰4");
 			}
 		};
 		
 		test.test();
 		//lambda
 		test=()->{
-				System.out.println("±»±ğÈË±§±§£¬ºåºåÊÇÊ²Ã´¸Ğ¾õ5");
+				System.out.println("è¢«åˆ«äººæŠ±æŠ±ï¼Œå“„å“„æ˜¯ä»€ä¹ˆæ„Ÿè§‰5");
 		};
 		test.test();
 	}
@@ -41,10 +41,10 @@ public class Test202_2 {
 interface ITest{
     void test();
 }
-//Íâ²¿Àà
+//å¤–éƒ¨ç±»
 class Test1 implements ITest{
 	@Override
 	public void test() {
-		System.out.println("±»±ğÈË±§±§£¬ºåºåÊÇÊ²Ã´¸Ğ¾õ1");
+		System.out.println("è¢«åˆ«äººæŠ±æŠ±ï¼Œå“„å“„æ˜¯ä»€ä¹ˆæ„Ÿè§‰1");
 	}
 }

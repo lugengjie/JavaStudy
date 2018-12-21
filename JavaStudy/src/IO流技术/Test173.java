@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 /**
- * IO±ê×¼²½Öè
+ * IOæ ‡å‡†æ­¥éª¤
  * @author jie
  *
  */
@@ -16,23 +16,23 @@ public class Test173 {
 		demo2();
 	}
 	public static void demo1() {
-		//´´½¨Ô´
-		File file=new File(System.getProperty("user.dir")+"/src/IOÁ÷¼¼Êõ/test.txt");
+		//åˆ›å»ºæº
+		File file=new File(System.getProperty("user.dir")+"/src/IOæµæŠ€æœ¯/test.txt");
 		
 		try {
-			//Ñ¡ÔñÁ÷
+			//é€‰æ‹©æµ
 			InputStream is=new FileInputStream(file);
-			//²Ù×÷
-			//¶ÁÈ¡µÚÒ»¸ö×Ö½Ú
+			//æ“ä½œ
+			//è¯»å–ç¬¬ä¸€ä¸ªå­—èŠ‚
 			int data=is.read();
 			System.out.println((char)data);
-			//¶ÁÈ¡µÚ¶ş¸ö×Ö½Ú
+			//è¯»å–ç¬¬äºŒä¸ªå­—èŠ‚
 			data=is.read();
 			System.out.println((char)data);
-			//¶Áµ½ÎÄ¼şÎ²·µ»Ø-1
+			//è¯»åˆ°æ–‡ä»¶å°¾è¿”å›-1
 			data=is.read();
 			System.out.println(data);
-			//Í¨Öª²Ù×÷ÏµÍ³¿ÉÒÔÊÍ·Å×ÊÔ´ÁË
+			//é€šçŸ¥æ“ä½œç³»ç»Ÿå¯ä»¥é‡Šæ”¾èµ„æºäº†
 			is.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -41,14 +41,14 @@ public class Test173 {
 		}
 	}
 	/**
-	 * ¶Ôdemo1µÄÓÅ»¯
+	 * å¯¹demo1çš„ä¼˜åŒ–
 	 */
 	private static void demo2() {
-		//´´½¨Ô´
-		File file=new File(System.getProperty("user.dir")+"/src/IOÁ÷¼¼Êõ/test.txt");
+		//åˆ›å»ºæº
+		File file=new File(System.getProperty("user.dir")+"/src/IOæµæŠ€æœ¯/test.txt");
 		InputStream is=null;
 		try {
-			//Ñ¡ÔñÁ÷
+			//é€‰æ‹©æµ
 			is=new FileInputStream(file);
 			int temp;
 			while(-1!=(temp=is.read())) {

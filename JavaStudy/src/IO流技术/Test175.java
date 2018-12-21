@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,13 +9,13 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * IOÎÄ¼ş¿½±´
+ * IOæ–‡ä»¶æ‹·è´
  * @author jie
  *
  */
 public class Test175 {
 	public static void main(String[] args) {
-		copy("src/IOÁ÷¼¼Êõ/03.jpeg","src/IOÁ÷¼¼Êõ/02.jpeg");
+		copy("src/IOæµæŠ€æœ¯/03.jpeg","src/IOæµæŠ€æœ¯/02.jpeg");
 	}
 	private static void copy(String res,String dec) {
 		File resFile=new File(res);
@@ -39,7 +39,7 @@ public class Test175 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
-			//ÏÈ´ò¿ªµÄºó¹Ø±Õ£¬ºó´ò¿ªµÄÏÈ¹Ø±Õ
+			//å…ˆæ‰“å¼€çš„åå…³é—­ï¼Œåæ‰“å¼€çš„å…ˆå…³é—­
 			if(null!=os) {
 				try {
 					os.close();

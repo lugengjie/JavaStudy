@@ -1,8 +1,8 @@
-package ���߳�;
+package 多线程;
 
 import java.lang.Thread.State;
 /**
- * ��ȹ۲�״̬
+ * 深度观察状态
  * @author jie
  *
  */
@@ -19,7 +19,7 @@ public class Test208 {
 			}
 			
 		});
-		//�۲�״̬
+		//观察状态
 		State state=t.getState();
 		System.out.println(state);//NEW
 		t.start();	//RUNNABLE

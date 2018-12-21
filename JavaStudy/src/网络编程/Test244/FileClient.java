@@ -1,4 +1,4 @@
-package ÍøÂç±à³Ì.Test244;
+package ç½‘ç»œç¼–ç¨‹.Test244;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -10,21 +10,21 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 /**
- * ÊìÏ¤Á÷³Ì
- * ´´½¨¿Í»§¶Ë
- * 1.½¨Á¢Á¬½Ó£ºÊ¹ÓÃSocket´´½¨¿Í»§¶Ë+·şÎñÆ÷µÄµØÖ·ºÍ¶Ë¿Ú
- * 2.²Ù×÷£ºÊäÈëÊä³ö²Ù×÷
- * 3.ÊÍ·Å×ÊÔ´
+ * ç†Ÿæ‚‰æµç¨‹
+ * åˆ›å»ºå®¢æˆ·ç«¯
+ * 1.å»ºç«‹è¿æ¥ï¼šä½¿ç”¨Socketåˆ›å»ºå®¢æˆ·ç«¯+æœåŠ¡å™¨çš„åœ°å€å’Œç«¯å£
+ * 2.æ“ä½œï¼šè¾“å…¥è¾“å‡ºæ“ä½œ
+ * 3.é‡Šæ”¾èµ„æº
  * @author jie
  *
  */
 public class FileClient {
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		System.out.println("----Client----");
-		// * 1.½¨Á¢Á¬½Ó£ºÊ¹ÓÃSocket´´½¨¿Í»§¶Ë+·şÎñÆ÷µÄµØÖ·ºÍ¶Ë¿Ú
+		// * 1.å»ºç«‹è¿æ¥ï¼šä½¿ç”¨Socketåˆ›å»ºå®¢æˆ·ç«¯+æœåŠ¡å™¨çš„åœ°å€å’Œç«¯å£
 		Socket client=new Socket("localhost",8888);
-		// * 2.²Ù×÷£ºÊäÈëÊä³ö²Ù×÷
-		InputStream is=new BufferedInputStream(new FileInputStream("src/ÍøÂç±à³Ì/03.jpeg"));
+		// * 2.æ“ä½œï¼šè¾“å…¥è¾“å‡ºæ“ä½œ
+		InputStream is=new BufferedInputStream(new FileInputStream("src/ç½‘ç»œç¼–ç¨‹/03.jpeg"));
 		OutputStream os=new BufferedOutputStream(client.getOutputStream());
 		int len=0;
 		byte[] data=new byte[1024];
@@ -32,7 +32,7 @@ public class FileClient {
 			os.write(data, 0, len);
 		}
 		os.flush();
-		// * 3.ÊÍ·Å×ÊÔ´
+		// * 3.é‡Šæ”¾èµ„æº
 		os.close();
 		is.close();
 		client.close();

@@ -1,11 +1,11 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.MapTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.MapTest;
 
 import java.util.HashMap;
 import java.util.Map;
 /**
- * map½Ó¿Ú³£ÓÃ·½·¨
+ * mapæ¥å£å¸¸ç”¨æ–¹æ³•
  * @author jie
- *¼ü¶ÔÏó²»ÄÜÖØ¸´£¬ÖØ¸´µÄ£¬ĞÂµÄ»á¸²¸Ç¾ÃµÄ
+ *é”®å¯¹è±¡ä¸èƒ½é‡å¤ï¼Œé‡å¤çš„ï¼Œæ–°çš„ä¼šè¦†ç›–ä¹…çš„
  */
 public class Test148 {
 	public static void main(String[] args) {

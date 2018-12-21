@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -13,10 +13,10 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * ¶ÔÏóÁ÷
- * Ğ´³öºó¶ÁÈ¡
- * ¶Á³öË³ĞòÓëĞ´³öË³ĞòÒ»ÖÂ
- * ²¢ÊÇ²»ËùÓĞÀà¶¼¿ÉÒÔĞòÁĞ»¯ĞèÒª Serializable
+ * å¯¹è±¡æµ
+ * å†™å‡ºåè¯»å–
+ * è¯»å‡ºé¡ºåºä¸å†™å‡ºé¡ºåºä¸€è‡´
+ * å¹¶æ˜¯ä¸æ‰€æœ‰ç±»éƒ½å¯ä»¥åºåˆ—åŒ–éœ€è¦ Serializable
  * ObjectOutputStream()
  * ObjectInputStream()
  * @author jie
@@ -26,17 +26,17 @@ public class Test185 {
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		demo1();
 	}
-	//×Ö½ÚÊı×éÁ÷
+	//å­—èŠ‚æ•°ç»„æµ
 	private static void demo1() throws IOException, ClassNotFoundException {
 		ByteArrayOutputStream baos=new ByteArrayOutputStream();
 		ObjectOutputStream oos=new ObjectOutputStream(new BufferedOutputStream(baos));
-		oos.writeUTF("ÎÒ°®Äã");
+		oos.writeUTF("æˆ‘çˆ±ä½ ");
 		oos.writeByte(1);
 		oos.writeChar('a');
-		oos.writeObject("ÄãºÃ");
+		oos.writeObject("ä½ å¥½");
 		oos.writeObject(new Date());
-		oos.writeObject(new Employee("ÂíÔÆ", 400));
-		//¼ÇµÃÇ¿ÖÆË¢ĞÂ
+		oos.writeObject(new Employee("é©¬äº‘", 400));
+		//è®°å¾—å¼ºåˆ¶åˆ·æ–°
 		oos.flush();
 		byte[] datas=baos.toByteArray();
 		ObjectInputStream ois=new ObjectInputStream(new BufferedInputStream(new ByteArrayInputStream(datas)));
@@ -59,7 +59,7 @@ public class Test185 {
 
 	}
 }
-//javabean ·â×°Àà
+//javabean å°è£…ç±»
 class Employee implements Serializable{
 	private String name;
 	private  transient double salary;

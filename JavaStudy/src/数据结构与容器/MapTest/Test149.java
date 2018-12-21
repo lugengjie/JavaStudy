@@ -1,19 +1,19 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.MapTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.MapTest;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Hashmap³£ÓÃ·½·¨²âÊÔ2
+ * Hashmapå¸¸ç”¨æ–¹æ³•æµ‹è¯•2
  * @author jie
  *
  */
 public class Test149 {
 	public static void main(String[] args) {
 		Map<Integer,Employee> map=new HashMap<Integer,Employee>();
-		Employee e1=new Employee("Ğ¡Ã÷",1,1);
-		Employee e2=new Employee("Ğ¡»Æ",2,2);
-		Employee e3=new Employee("Ğ¡ºÚ",3,3);
+		Employee e1=new Employee("å°æ˜",1,1);
+		Employee e2=new Employee("å°é»„",2,2);
+		Employee e3=new Employee("å°é»‘",3,3);
 		map.put(1, e1);
 		map.put(2, e2);
 		map.put(3, e3);

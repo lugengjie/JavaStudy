@@ -1,4 +1,4 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +15,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.comparator.ExtensionFileComparator;
 
 /**
- * ´´½¨Ïß³Ì·½·¨Èı£º
+ * åˆ›å»ºçº¿ç¨‹æ–¹æ³•ä¸‰ï¼š
  * Callable
  */
 public class Test200_1 implements Callable<Boolean>{
@@ -29,7 +29,7 @@ public class Test200_1 implements Callable<Boolean>{
 
 	@Override
 	public Boolean call() throws Exception {
-		FileUtils.copyURLToFile(new URL(this.url),new File("src/¶àÏß³Ì/"+this.name));
+		FileUtils.copyURLToFile(new URL(this.url),new File("src/å¤šçº¿ç¨‹/"+this.name));
 		System.out.println(name);
 		return true;
 	}
@@ -39,18 +39,18 @@ public class Test200_1 implements Callable<Boolean>{
 		Test200_1 cd2=new Test200_1("http://p1.pstatp.com/large/403c00037462ae2eee13","spl.jpg");
 		Test200_1 cd3=new Test200_1("http://5b0988e595225.cdn.sohucs.com/images/20170830/d8b57e0dce0d4fa29bd5ef014be663d5.jpeg", "success.jpg");
 		
-		//´´½¨Ö´ĞĞ·şÎñ
+		//åˆ›å»ºæ‰§è¡ŒæœåŠ¡
 		ExecutorService es=Executors.newFixedThreadPool(3);
-		//Ìá½»Ö´ĞĞ
+		//æäº¤æ‰§è¡Œ
 		Future<Boolean> result1=es.submit(cd1);
 		Future<Boolean> result2=es.submit(cd2);
 		Future<Boolean> result3=es.submit(cd3);
-		//»ñÈ¡½á¹û
+		//è·å–ç»“æœ
 		boolean r1=result1.get();
 		boolean r2=result2.get();
 		boolean r3=result3.get();
 		System.out.println(r3);
-		//¹Ø±Õ·şÎñ
+		//å…³é—­æœåŠ¡
 		es.shutdownNow();
 	}
 

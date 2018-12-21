@@ -1,4 +1,4 @@
-package ÍøÂç±à³Ì.Test247;
+package ç½‘ç»œç¼–ç¨‹.Test247;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
@@ -9,8 +9,8 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 /**
- * ÔÚÏßÁÄÌìÊÒ£º¿Í»§¶Ë
- * Ä¿±ê£ºÊµÏÖÒ»¸ö¿Í»§¿ÉÒÔÕı³£ÊÕ·¢ÏûÏ¢
+ * åœ¨çº¿èŠå¤©å®¤ï¼šå®¢æˆ·ç«¯
+ * ç›®æ ‡ï¼šå®ç°ä¸€ä¸ªå®¢æˆ·å¯ä»¥æ­£å¸¸æ”¶å‘æ¶ˆæ¯
  * @author jie
  *
  */
@@ -18,9 +18,9 @@ public class MultiClient {
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		System.out.println("----Client----");	
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("ÇëÊäÈëÓÃ»§Ãû");
+		System.out.println("è¯·è¾“å…¥ç”¨æˆ·å");
 		String uname=br.readLine();
-		// 1.½¨Á¢Á¬½Ó£ºÊ¹ÓÃSocket´´½¨¿Í»§¶Ë+·şÎñÆ÷µÄµØÖ·ºÍ¶Ë¿Ú
+		// 1.å»ºç«‹è¿æ¥ï¼šä½¿ç”¨Socketåˆ›å»ºå®¢æˆ·ç«¯+æœåŠ¡å™¨çš„åœ°å€å’Œç«¯å£
 		Socket client=new Socket("localhost",8888);
 		new Thread(new Send(client,uname)).start();
 		new Thread(new Receive(client)).start();

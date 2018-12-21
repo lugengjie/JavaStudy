@@ -1,22 +1,22 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.UnsupportedEncodingException;
 
 public class Test171 {
 	public static void main(String[] args) {
-		String msg="ĞÔÃüÉúÃüÊ¹Ãü";
-		//Ä¬ÈÏÊ¹ÓÃ¹¤³ÌµÄ×Ö·û¼¯
-		//×Ö½ÚÊı×é
+		String msg="æ€§å‘½ç”Ÿå‘½ä½¿å‘½";
+		//é»˜è®¤ä½¿ç”¨å·¥ç¨‹çš„å­—ç¬¦é›†
+		//å­—èŠ‚æ•°ç»„
 		byte[] datas=msg.getBytes();
 		System.out.println(datas.length);
-		//±àÂë
+		//ç¼–ç 
 		try {
 			datas=msg.getBytes("UTF-8");
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
 		System.out.println(datas.length);
-		//½âÂë
+		//è§£ç 
 		try {
 			msg=new String(datas,0,datas.length,"UTF-8");
 		} catch (UnsupportedEncodingException e) {

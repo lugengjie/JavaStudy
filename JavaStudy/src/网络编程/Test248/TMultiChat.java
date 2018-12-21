@@ -1,4 +1,4 @@
-package ÍøÂç±à³Ì.Test248;
+package ç½‘ç»œç¼–ç¨‹.Test248;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -7,11 +7,11 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import ÍøÂç±à³Ì.Test247.Utils;
+import ç½‘ç»œç¼–ç¨‹.Test247.Utils;
 
 /**
- * ÔÚÏßÁÄÌìÊÒ£º·şÎñÆ÷
- * Ä¿±ê£º¼ÓÈëÈİÆ÷£¬ÊµÏÖÈºÁÄ
+ * åœ¨çº¿èŠå¤©å®¤ï¼šæœåŠ¡å™¨
+ * ç›®æ ‡ï¼šåŠ å…¥å®¹å™¨ï¼Œå®ç°ç¾¤èŠ
  * @author jie
  *
  */
@@ -19,18 +19,18 @@ public class TMultiChat {
 	private static CopyOnWriteArrayList<Channel> others=new CopyOnWriteArrayList<Channel>();
 	public static void main(String[] args) throws IOException {
 		System.out.println("------Service------");
-		// * 1.Ö¸¶¨¶Ë¿Ú Ê¹ÓÃServiceSocket´´½¨·şÎñÆ÷
+		// * 1.æŒ‡å®šç«¯å£ ä½¿ç”¨ServiceSocketåˆ›å»ºæœåŠ¡å™¨
 		ServerSocket server=new ServerSocket(8888);
-		// * 2.×èÈûÊ½µÈ´ıÁ¬½Ó accept
+		// * 2.é˜»å¡å¼ç­‰å¾…è¿æ¥ accept
 		while(true) {
 			Socket client = server.accept();
-			System.out.println("Ò»¸ö¿Í»§¶ËÁ¬½Ó");
+			System.out.println("ä¸€ä¸ªå®¢æˆ·ç«¯è¿æ¥");
 			Channel c=new Channel(client);
 			others.add(c);
 			new Thread(c).start();
 		}
 	}
-	//Ò»¸ö¿Í»§¶Ë´ú±íÒ»¸öChannel
+	//ä¸€ä¸ªå®¢æˆ·ç«¯ä»£è¡¨ä¸€ä¸ªChannel
 	static class Channel implements Runnable{
 		private DataInputStream dis;
 		private DataOutputStream dos;
@@ -53,51 +53,51 @@ public class TMultiChat {
 			try {
 				this.dis=new DataInputStream(client.getInputStream());
 				this.dos=new DataOutputStream(client.getOutputStream());
-				//»ñÈ¡Ãû³Æ
+				//è·å–åç§°
 				this.name=receive();
 				this.isRunning=true;
-				//»¶Ó­ÄúµÄµ½À´
-				send("»¶Ó­ÄúµÄµ½À´");
+				//æ¬¢è¿æ‚¨çš„åˆ°æ¥
+				send("æ¬¢è¿æ‚¨çš„åˆ°æ¥");
 			} catch (IOException e) {
-				System.out.println("------¹¹ÔìÆ÷------");
+				System.out.println("------æ„é€ å™¨------");
 				release();
 			}	
 			
 		}
-		//½ÓÊÕÏûÏ¢
+		//æ¥æ”¶æ¶ˆæ¯
 		private String receive() {
 			String msg="";
 			try {
 				msg=dis.readUTF();
 			} catch (IOException e) {
-				System.out.println("------½ÓÊÕ------");
+				System.out.println("------æ¥æ”¶------");
 				release();
 			}
 			return msg;
 		}
-		//·¢ËÍÏûÏ¢
+		//å‘é€æ¶ˆæ¯
 		private void send(String msg) {
 			try {
 				dos.writeUTF(msg);
 				dos.flush();
 			} catch (IOException e) {
-				System.out.println("------·¢ËÍ------");
+				System.out.println("------å‘é€------");
 				release();
 			}
 		}
 		/**
-		 * ÈºÁÄ£º»ñÈ¡×Ô¼ºµÄÏûÏ¢£¬·¢¸øÆäËûÈË
+		 * ç¾¤èŠï¼šè·å–è‡ªå·±çš„æ¶ˆæ¯ï¼Œå‘ç»™å…¶ä»–äºº
 		 */
 		private void sendOthers(String msg) {
 			for(Channel other:others) {
 				if(other==this) {
 					continue;
 				}else {
-					other.send(this.name+"¶ÔËùÓĞÈËËµ£º"+msg);
+					other.send(this.name+"å¯¹æ‰€æœ‰äººè¯´ï¼š"+msg);
 				}
 			}
 		}
-		//ÊÍ·Å×ÊÔ´
+		//é‡Šæ”¾èµ„æº
 		private void release() {
 			this.isRunning=false;
 			Utils.close(dos,dis,client);

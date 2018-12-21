@@ -1,6 +1,6 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.ArrayListTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.ArrayListTest;
 /**
- * remove()·½·¨
+ * remove()æ–¹æ³•
  * @author jie
  *
  */

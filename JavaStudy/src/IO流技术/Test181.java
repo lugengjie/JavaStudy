@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -8,26 +8,26 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 /**
- * ×Ö½Ú»º³åÁ÷
+ * å­—èŠ‚ç¼“å†²æµ
  * @author jie
  *
  */
 public class Test181 {
 	public static void main(String[] args) {
-		//¼Ó×Ö½Ú»º³åÁ÷ Êä³ö118ms
+		//åŠ å­—èŠ‚ç¼“å†²æµ è¾“å‡º118ms
 		long t1=System.currentTimeMillis();
-		copy1("src/IOÁ÷¼¼Êõ/166_IO_¿ªÆª.mp4","src/IOÁ÷¼¼Êõ/¿ªÆª.mp4");
+		copy1("src/IOæµæŠ€æœ¯/166_IO_å¼€ç¯‡.mp4","src/IOæµæŠ€æœ¯/å¼€ç¯‡.mp4");
 		long t2=System.currentTimeMillis();
 		System.out.println(t2-t1);
 		
-		//²»¼Ó×Ö½Ú»º³åÁ÷ Êä³ö360ms
+		//ä¸åŠ å­—èŠ‚ç¼“å†²æµ è¾“å‡º360ms
 //		long t1=System.currentTimeMillis();
-//		copy2("src/IOÁ÷¼¼Êõ/166_IO_¿ªÆª.mp4","src/IOÁ÷¼¼Êõ/¿ªÆª.mp4");
+//		copy2("src/IOæµæŠ€æœ¯/166_IO_å¼€ç¯‡.mp4","src/IOæµæŠ€æœ¯/å¼€ç¯‡.mp4");
 //		long t2=System.currentTimeMillis();
 //		System.out.println(t2-t1);
 		
 	}
-	//¼Ó×Ö½Ú»º³åÁ÷
+	//åŠ å­—èŠ‚ç¼“å†²æµ
 	private static void copy1(String srcPath,String destPath) {
 		try (InputStream is=new BufferedInputStream(new FileInputStream(srcPath));
 			OutputStream os=new BufferedOutputStream(new FileOutputStream(destPath));){
@@ -41,7 +41,7 @@ public class Test181 {
 			e.printStackTrace();
 		}
 	}
-	//²»¼Ó×Ö½Ú»º³åÁ÷
+	//ä¸åŠ å­—èŠ‚ç¼“å†²æµ
 	private static void copy2(String srcPath,String destPath) {
 		try (InputStream is=new FileInputStream(srcPath);
 			OutputStream os=new FileOutputStream(destPath);){

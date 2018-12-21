@@ -1,11 +1,11 @@
-package 网络编程.Test247;
+package 缃戠粶缂栫▼.Test247;
 
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.Socket;
 
 /**
- * 使用多线程封装接收端
+ * 浣跨敤澶氱嚎绋嬪皝瑁呮帴鏀剁
  * @author jie
  *
  */
@@ -19,7 +19,7 @@ public class Receive implements Runnable {
 			this.isRunning=true;
 			this.dis=new DataInputStream(client.getInputStream());
 		} catch (IOException e) {
-			System.out.println("--------构造器错误--------");
+			System.out.println("--------鏋勯�犲櫒閿欒--------");
 			release();
 		}
 	}
@@ -38,7 +38,7 @@ public class Receive implements Runnable {
 		try {
 			msg=this.dis.readUTF();
 		} catch (IOException e) {
-			System.out.println("--------接收错误--------");
+			System.out.println("--------鎺ユ敹閿欒--------");
 			release();
 		}
 		return msg;

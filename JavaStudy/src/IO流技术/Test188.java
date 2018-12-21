@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -15,19 +15,19 @@ import java.util.List;
 import java.util.Vector;
 
 /*
- * ÃæÏò¶ÔÏó£¬·â×°ÇĞ¸îÎÄ¼ş
- * ºÏ²¢ÎÄ¼ş
+ * é¢å‘å¯¹è±¡ï¼Œå°è£…åˆ‡å‰²æ–‡ä»¶
+ * åˆå¹¶æ–‡ä»¶
  */
 public class Test188 {
-	//Ô´
+	//æº
 	private File file;
-	//Ä¿µÄÎÄ¼şÄ¿Â¼
+	//ç›®çš„æ–‡ä»¶ç›®å½•
 	private String destDir;
-	//ËùÓĞ·Ö¸îºóµÄÎÄ¼ş´æ´¢Â·¾¶
+	//æ‰€æœ‰åˆ†å‰²åçš„æ–‡ä»¶å­˜å‚¨è·¯å¾„
 	private List<String> destPaths;
-	//Ã¿¿é´óĞ¡
+	//æ¯å—å¤§å°
 	int blockSize;
-	//¿éÊı
+	//å—æ•°
 	int num;
 	
 	public Test188(String file, String destDir) {
@@ -50,11 +50,11 @@ public class Test188 {
 	}
 	
 	public void split() throws IOException {
-		//×Ü³¤¶È
+		//æ€»é•¿åº¦
 		long len=file.length();
-		//¿ªÊ¼Î»ÖÃ
+		//å¼€å§‹ä½ç½®
 		int beginPos=0;
-		//Ã¿¿éµÄÊµ¼Ê³¤¶È
+		//æ¯å—çš„å®é™…é•¿åº¦
 		int actualSize=0;		
 		for(int i=0;i<num;i++) {
 			beginPos=i*blockSize;
@@ -86,7 +86,7 @@ public class Test188 {
 		raf2.close();
 		raf.close();
 	}
-	//ºÏ²¢
+	//åˆå¹¶
     //	SequenceInputStream
 	public  void  merge(String destPath) throws IOException {
 		OutputStream os=new BufferedOutputStream(new FileOutputStream(destPath, true));
@@ -107,8 +107,8 @@ public class Test188 {
 	}
 
 	public static void main(String[] args) throws IOException {
-		Test188 split=new Test188("src/IOÁ÷¼¼Êõ/¿ªÆª.mp4", "src/IOÁ÷¼¼Êõ/splitVideo");
+		Test188 split=new Test188("src/IOæµæŠ€æœ¯/å¼€ç¯‡.mp4", "src/IOæµæŠ€æœ¯/splitVideo");
 		split.split();
-		split.merge("src/IOÁ÷¼¼Êõ/splitVideo/merge.mp4");
+		split.merge("src/IOæµæŠ€æœ¯/splitVideo/merge.mp4");
 	}
 }

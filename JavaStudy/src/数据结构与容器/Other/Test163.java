@@ -1,11 +1,11 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.Other;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.Other;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 /**
- * Collections¸¨ÖúÀàµÄÊ¹ÓÃ
- * CollectionÊÇ½Ó¿Ú£¬CollectionsÊÇ¹¤¾ßÀà
+ * Collectionsè¾…åŠ©ç±»çš„ä½¿ç”¨
+ * Collectionæ˜¯æ¥å£ï¼ŒCollectionsæ˜¯å·¥å…·ç±»
  * @author jie
  *
  */

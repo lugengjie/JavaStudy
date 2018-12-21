@@ -1,38 +1,38 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * lambda±í´ïÊ½,¼ò»¯Ïß³Ì£¨ÓÃÒ»´Î£©µÄÊ¹ÓÃ
+ * lambdaè¡¨è¾¾å¼,ç®€åŒ–çº¿ç¨‹ï¼ˆç”¨ä¸€æ¬¡ï¼‰çš„ä½¿ç”¨
  * @author jie
  *
  */
 public class Test202_1 {
-	//¾²Ì¬ÄÚ²¿Àà
+	//é™æ€å†…éƒ¨ç±»
 	static class Test implements Runnable{
 		@Override
 		public void run() {
-			System.out.println("±§±§ÎÒ£¬ºåºåÎÒ");
+			System.out.println("æŠ±æŠ±æˆ‘ï¼Œå“„å“„æˆ‘");
 		}
 	}
 	public static void main(String[] args) {
 		new Thread(new Test()).start();
 		
-		//¾Ö²¿ÄÚ²¿Àà
+		//å±€éƒ¨å†…éƒ¨ç±»
 		class Test2 implements Runnable{
 			@Override
 			public void run() {
-				System.out.println("±§±§ÎÒ£¬ºåºåÎÒ");
+				System.out.println("æŠ±æŠ±æˆ‘ï¼Œå“„å“„æˆ‘");
 			}
 		}
 		new Thread(new Test2()).start();
-		//ÄäÃûÄÚ²¿Àà£¬±ØĞë½èÖú½Ó¿Ú»ò¸¸Àà
+		//åŒ¿åå†…éƒ¨ç±»ï¼Œå¿…é¡»å€ŸåŠ©æ¥å£æˆ–çˆ¶ç±»
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-				System.out.println("±§±§ÎÒ£¬ºåºåÎÒ");
+				System.out.println("æŠ±æŠ±æˆ‘ï¼Œå“„å“„æˆ‘");
 			}
 		}).start();;
-		//jdk8.0 lambda±í´ïÊ½
+		//jdk8.0 lambdaè¡¨è¾¾å¼
 		new Thread(()-> {
-			System.out.println("±§±§ÎÒ£¬ºåºåÎÒ");
+			System.out.println("æŠ±æŠ±æˆ‘ï¼Œå“„å“„æˆ‘");
 		}).start();
 	}
 }

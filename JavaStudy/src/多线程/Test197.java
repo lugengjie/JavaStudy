@@ -1,4 +1,4 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.net.URL;
 import org.apache.commons.io.FileUtils;
 
 /**
- * ¶àÏß³ÌÏÂÔØÍ¼Æ¬
+ * å¤šçº¿ç¨‹ä¸‹è½½å›¾ç‰‡
  * @author jie
  *
  */
@@ -23,7 +23,7 @@ public class Test197 extends Thread{
 	@Override
 	public void run() {
 		try {
-			FileUtils.copyURLToFile(new URL(this.url),new File("src/¶àÏß³Ì/"+this.name));
+			FileUtils.copyURLToFile(new URL(this.url),new File("src/å¤šçº¿ç¨‹/"+this.name));
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

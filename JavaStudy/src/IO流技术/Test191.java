@@ -1,4 +1,4 @@
-package IOÁ÷¼¼Êõ;
+package IOæµæŠ€æœ¯;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +13,7 @@ import org.apache.commons.io.filefilter.EmptyFileFilter;
 import org.apache.commons.io.filefilter.FileFilterUtils;
 import org.apache.commons.io.filefilter.SuffixFileFilter;
 /**
- * commonsIOºËĞÄ²Ù×÷
+ * commonsIOæ ¸å¿ƒæ“ä½œ
  * @author jie
  *
  */
@@ -27,75 +27,75 @@ public class Test191 {
 		
 		
 	}
-	//ÎÄ¼ş»òÎÄ¼şÄ¿Â¼´óĞ¡
+	//æ–‡ä»¶æˆ–æ–‡ä»¶ç›®å½•å¤§å°
 	private static void demo1() {
-		long len=FileUtils.sizeOf(new File("src/IOÁ÷¼¼Êõ/¿ªÆª.mp4"));
+		long len=FileUtils.sizeOf(new File("src/IOæµæŠ€æœ¯/å¼€ç¯‡.mp4"));
 		System.out.println(len);
-		len=FileUtils.sizeOf(new File("src/IOÁ÷¼¼Êõ"));
+		len=FileUtils.sizeOf(new File("src/IOæµæŠ€æœ¯"));
 		System.out.println(len);
 	}
 	/**
-	 * ÁĞ³ö×ÓËï¼¶
+	 * åˆ—å‡ºå­å­™çº§
 	 */
 	private static void demo2() {
-//		Collection<File> files=FileUtils.listFiles(new File("src/IOÁ÷¼¼Êõ"),EmptyFileFilter.NOT_EMPTY,null);
+//		Collection<File> files=FileUtils.listFiles(new File("src/IOæµæŠ€æœ¯"),EmptyFileFilter.NOT_EMPTY,null);
 //		for(File file:files) {
 //			System.out.println(file.getAbsolutePath());
 //		}
 		
-//		Collection<File> files=FileUtils.listFiles(new File("src/IOÁ÷¼¼Êõ"),EmptyFileFilter.NOT_EMPTY,DirectoryFileFilter.INSTANCE);
+//		Collection<File> files=FileUtils.listFiles(new File("src/IOæµæŠ€æœ¯"),EmptyFileFilter.NOT_EMPTY,DirectoryFileFilter.INSTANCE);
 //		for(File file:files) {
 //			System.out.println(file.getAbsolutePath());
 //		}
 		
-//		Collection<File> files=FileUtils.listFiles(new File("src/IOÁ÷¼¼Êõ"),new SuffixFileFilter("mp4"),DirectoryFileFilter.INSTANCE);
+//		Collection<File> files=FileUtils.listFiles(new File("src/IOæµæŠ€æœ¯"),new SuffixFileFilter("mp4"),DirectoryFileFilter.INSTANCE);
 //		for(File file:files) {
 //			System.out.println(file.getAbsolutePath());
 //		}
 		
-//		Collection<File> files=FileUtils.listFiles(new File("src/IOÁ÷¼¼Êõ"),FileFilterUtils.or(new SuffixFileFilter("mp4"),new SuffixFileFilter("class"),EmptyFileFilter.NOT_EMPTY),DirectoryFileFilter.INSTANCE);
+//		Collection<File> files=FileUtils.listFiles(new File("src/IOæµæŠ€æœ¯"),FileFilterUtils.or(new SuffixFileFilter("mp4"),new SuffixFileFilter("class"),EmptyFileFilter.NOT_EMPTY),DirectoryFileFilter.INSTANCE);
 //		for(File file:files) {
 //			System.out.println(file.getAbsolutePath());
 //		}
 		
-		Collection<File> files=FileUtils.listFiles(new File("src/IOÁ÷¼¼Êõ"),FileFilterUtils.and(new SuffixFileFilter("mp4"),EmptyFileFilter.NOT_EMPTY),DirectoryFileFilter.INSTANCE);
+		Collection<File> files=FileUtils.listFiles(new File("src/IOæµæŠ€æœ¯"),FileFilterUtils.and(new SuffixFileFilter("mp4"),EmptyFileFilter.NOT_EMPTY),DirectoryFileFilter.INSTANCE);
 		for(File file:files) {
 			System.out.println(file.getAbsolutePath());
 		}
 	}
 	/**
-	 * ¶ÁÈ¡ÎÄ¼ş
+	 * è¯»å–æ–‡ä»¶
 	 * @throws IOException 
 	 */
 	public static void demo3() throws IOException {
-//		String msg=FileUtils.readFileToString(new File("src/IOÁ÷¼¼Êõ/Test167.java"),"gbk");
+//		String msg=FileUtils.readFileToString(new File("src/IOæµæŠ€æœ¯/Test167.java"),"gbk");
 //		System.out.println(msg);
-//		byte[] byteArray=FileUtils.readFileToByteArray(new File("src/IOÁ÷¼¼Êõ/Test167.java"));
+//		byte[] byteArray=FileUtils.readFileToByteArray(new File("src/IOæµæŠ€æœ¯/Test167.java"));
 //		System.out.println(byteArray.length);
 		
-		//ÖğĞĞ¶ÁÈ¡
-//		List<String> msgs=FileUtils.readLines(new File("src/IOÁ÷¼¼Êõ/Test167.java"), "gbk");
+		//é€è¡Œè¯»å–
+//		List<String> msgs=FileUtils.readLines(new File("src/IOæµæŠ€æœ¯/Test167.java"), "gbk");
 //		for(String msgTemp:msgs) {
 //			System.out.println(msgTemp);
 //		}
 		
-		LineIterator it=FileUtils.lineIterator(new File("src/IOÁ÷¼¼Êõ/Test167.java"),"gbk");
+		LineIterator it=FileUtils.lineIterator(new File("src/IOæµæŠ€æœ¯/Test167.java"),"gbk");
 		while(it.hasNext()) {
 			System.out.println(it.nextLine());
 		}
 
 	}
 	private static void demo4() throws IOException {
-		//Ğ´³öÎÄ¼ş
-		FileUtils.write(new File("src/IOÁ÷¼¼Êõ/test1.txt"), "Ï²»¶Ò»¸öÈËÊÇÒ»ÖÖÊ²Ã´ÑùµÄ¸Ğ¾õ\n","gbk");
-		FileUtils.writeStringToFile(new File("src/IOÁ÷¼¼Êõ/test1.txt"), "Ï²»¶Ò»¸öÈËÊÇÒ»ÖÖÊ²Ã´ÑùµÄ¸Ğ¾õ\n","gbk",true);
-		FileUtils.writeByteArrayToFile(new File("src/IOÁ÷¼¼Êõ/test1.txt"), "Ï²»¶Ò»¸öÈËÊÇÒ»ÖÖÊ²Ã´ÑùµÄ¸Ğ¾õ\n".getBytes("gbk"),true);
+		//å†™å‡ºæ–‡ä»¶
+		FileUtils.write(new File("src/IOæµæŠ€æœ¯/test1.txt"), "å–œæ¬¢ä¸€ä¸ªäººæ˜¯ä¸€ç§ä»€ä¹ˆæ ·çš„æ„Ÿè§‰\n","gbk");
+		FileUtils.writeStringToFile(new File("src/IOæµæŠ€æœ¯/test1.txt"), "å–œæ¬¢ä¸€ä¸ªäººæ˜¯ä¸€ç§ä»€ä¹ˆæ ·çš„æ„Ÿè§‰\n","gbk",true);
+		FileUtils.writeByteArrayToFile(new File("src/IOæµæŠ€æœ¯/test1.txt"), "å–œæ¬¢ä¸€ä¸ªäººæ˜¯ä¸€ç§ä»€ä¹ˆæ ·çš„æ„Ÿè§‰\n".getBytes("gbk"),true);
 		
-		//Ğ´³öÁĞ±í
+		//å†™å‡ºåˆ—è¡¨
 		List list=new ArrayList<>();
-		list.add("Éç»á¹¤³ÌÑ§");
-		list.add("Ñ§Ï°");
-		FileUtils.writeLines(new File("src/IOÁ÷¼¼Êõ/test1.txt"),list,"...",true);
+		list.add("ç¤¾ä¼šå·¥ç¨‹å­¦");
+		list.add("å­¦ä¹ ");
+		FileUtils.writeLines(new File("src/IOæµæŠ€æœ¯/test1.txt"),list,"...",true);
 
 	}
 }

@@ -1,9 +1,9 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.SetTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.SetTest;
 
 import java.util.HashMap;
 
 /**
- * ÊÖ¶¯ÊµÏÖHashSet
+ * æ‰‹åŠ¨å®ç°HashSet
  * @author jie
  *
  */

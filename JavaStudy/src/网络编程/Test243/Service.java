@@ -1,4 +1,4 @@
-package ÍøÂç±à³Ì.Test243;
+package ç½‘ç»œç¼–ç¨‹.Test243;
 
 import java.io.DataInputStream;
 import java.io.IOException;
@@ -6,28 +6,28 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * ÊìÏ¤Á÷³Ì
- * ´´½¨·şÎñÆ÷
- * 1.Ö¸¶¨¶Ë¿Ú Ê¹ÓÃServerSocket´´½¨·şÎñÆ÷
- * 2.×èÈûÊ½µÈ´ıÁ¬½Ó accept
- * 3.²Ù×÷£ºÊäÈëÊä³ö²Ù×÷
- * 4.ÊÍ·Å×ÊÔ´
+ * ç†Ÿæ‚‰æµç¨‹
+ * åˆ›å»ºæœåŠ¡å™¨
+ * 1.æŒ‡å®šç«¯å£ ä½¿ç”¨ServerSocketåˆ›å»ºæœåŠ¡å™¨
+ * 2.é˜»å¡å¼ç­‰å¾…è¿æ¥ accept
+ * 3.æ“ä½œï¼šè¾“å…¥è¾“å‡ºæ“ä½œ
+ * 4.é‡Šæ”¾èµ„æº
  * @author jie
  *
  */
 public class Service {
 	public static void main(String[] args) throws IOException {
 		System.out.println("------Service------");
-		// * 1.Ö¸¶¨¶Ë¿Ú Ê¹ÓÃServiceSocket´´½¨·şÎñÆ÷
+		// * 1.æŒ‡å®šç«¯å£ ä½¿ç”¨ServiceSocketåˆ›å»ºæœåŠ¡å™¨
 		ServerSocket server=new ServerSocket(8888);
-		// * 2.×èÈûÊ½µÈ´ıÁ¬½Ó accept
+		// * 2.é˜»å¡å¼ç­‰å¾…è¿æ¥ accept
 		Socket client=server.accept();
-		System.out.println("Ò»¸ö¿Í»§¶Ë½¨Á¢Á¬½Ó");
-		// * 3.²Ù×÷£ºÊäÈëÊä³ö²Ù×÷
+		System.out.println("ä¸€ä¸ªå®¢æˆ·ç«¯å»ºç«‹è¿æ¥");
+		// * 3.æ“ä½œï¼šè¾“å…¥è¾“å‡ºæ“ä½œ
 		DataInputStream dis=new DataInputStream(client.getInputStream());
 		String data=dis.readUTF();
 		System.out.println(data);
-		// * 4.ÊÍ·Å×ÊÔ´
+		// * 4.é‡Šæ”¾èµ„æº
 		dis.close();
 		client.close();
 

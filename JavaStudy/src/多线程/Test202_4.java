@@ -1,5 +1,5 @@
-package ¶àÏß³Ì;
-//lambdaÍÆµ¼+¼Ó²ÎÊý+¼Ó·µÖµ
+package å¤šçº¿ç¨‹;
+//lambdaæŽ¨å¯¼+åŠ å‚æ•°+åŠ è¿”å€¼
 public class Test202_4 {
 	public static void main(String[] args) {
 		IInterest love=(int a,int b)->{

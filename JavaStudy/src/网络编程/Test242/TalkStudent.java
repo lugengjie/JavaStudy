@@ -1,8 +1,8 @@
-package ÍøÂç±à³Ì.Test242;
+package ç½‘ç»œç¼–ç¨‹.Test242;
 
 public class TalkStudent {
 	public static void main(String[] args) {
-		new Thread(new TalkReceive(9999,"ÀÏÊ¦")).start();
+		new Thread(new TalkReceive(9999,"è€å¸ˆ")).start();
 		new Thread(new TalkSend(7777,"localhost",6666)).start();
 	}
 }

@@ -1,8 +1,8 @@
-package Êı¾İ½á¹¹ÓëÈİÆ÷.LinkedListTest;
+package æ•°æ®ç»“æ„ä¸å®¹å™¨.LinkedListTest;
 
 /**
- * ÊµÏÖLinkedListµÄget()²éÑ¯·½·¨
- * ½Úµã±éÀú
+ * å®ç°LinkedListçš„get()æŸ¥è¯¢æ–¹æ³•
+ * èŠ‚ç‚¹éå†
  * @author jie
  *
  */
@@ -27,7 +27,7 @@ public class Test144 {
 	public Object get(int index) {
 		Node temp=null;
 		if(index<0||index>size-1) {
-			return new RuntimeException("Ë÷ÒıÔ½½ç£¡");
+			return new RuntimeException("ç´¢å¼•è¶Šç•Œï¼");
 		}
 		if(index<(size>>1)) {
 			temp=first;

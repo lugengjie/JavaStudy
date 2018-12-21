@@ -1,9 +1,9 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * ¾²Ì¬´úÀíÉè¼ÆÄ£Ê½
- * ¹«¹²½Ó¿Ú:
- * ´úÀí½ÇÉ«
- * ÕæÕı½ÇÉ«
+ * é™æ€ä»£ç†è®¾è®¡æ¨¡å¼
+ * å…¬å…±æ¥å£:
+ * ä»£ç†è§’è‰²
+ * çœŸæ­£è§’è‰²
  * 
  * @author jie
  *
@@ -20,7 +20,7 @@ interface Marry{
 
 class You implements Marry{
 	public void happyMarry() {
-		System.out.println("½á»éÁË£¬½á»éÁË");
+		System.out.println("ç»“å©šäº†ï¼Œç»“å©šäº†");
 	}
 }
 
@@ -39,11 +39,11 @@ class MarryCompany implements Marry{
 		after();
 	}
 	private void start() {
-		System.out.println("²¼ÖÃ»éÀñÏÖ³¡");
+		System.out.println("å¸ƒç½®å©šç¤¼ç°åœº");
 
 	}
 	private void after() {
-		System.out.println("Ö÷³Ö»éÀñ");
+		System.out.println("ä¸»æŒå©šç¤¼");
 	}
 	
 }

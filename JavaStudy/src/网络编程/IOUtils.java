@@ -1,4 +1,4 @@
-package 网络编程;
+package 缃戠粶缂栫▼;
 
 
 import java.io.ByteArrayInputStream;
@@ -12,32 +12,32 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- *1銆� 鍥剧墖璇诲彇鍒板瓧鑺傛暟缁�
- *2銆� 瀛楄妭鏁扮粍鍐欏嚭鍒版枃浠�
- *  @author 瑁存柊
+ *1閵嗭拷 閸ュ墽澧栫拠璇插絿閸掓澘鐡ч懞鍌涙殶缂侊拷
+ *2閵嗭拷 鐎涙濡弫鎵矋閸愭瑥鍤崚鐗堟瀮娴狅拷
+ *  @author 鐟佸瓨鏌�
  *
  */
 public class IOUtils {
 	/**
-	 * 1銆佸浘鐗囪鍙栧埌瀛楄妭鏁扮粍
-	 * 1)銆佸浘鐗囧埌绋嬪簭  FileInputStream
-	 * 2)銆佺▼搴忓埌瀛楄妭鏁扮粍	ByteArrayOutputStream
+	 * 1閵嗕礁娴橀悧鍥嚢閸欐牕鍩岀�涙濡弫鎵矋
+	 * 1)閵嗕礁娴橀悧鍥у煂缁嬪绨�  FileInputStream
+	 * 2)閵嗕胶鈻兼惔蹇撳煂鐎涙濡弫鎵矋	ByteArrayOutputStream
 	 */
 	public static byte[] fileToByteArray(String filePath) {
-		//1銆佸垱寤烘簮涓庣洰鐨勫湴
+		//1閵嗕礁鍨卞鐑樼爱娑撳海娲伴惃鍕勾
 		File src = new File(filePath);
 		byte[] dest =null;
-		//2銆侀�夋嫨娴�
+		//2閵嗕線锟藉瀚ㄥù锟�
 		InputStream  is =null;
 		ByteArrayOutputStream baos =null;
 		try {
 			is =new FileInputStream(src);
 			baos = new ByteArrayOutputStream();
-			//3銆佹搷浣� (鍒嗘璇诲彇)
-			byte[] flush = new byte[1024*10]; //缂撳啿瀹瑰櫒
-			int len = -1; //鎺ユ敹闀垮害
+			//3閵嗕焦鎼锋担锟� (閸掑棙顔岀拠璇插絿)
+			byte[] flush = new byte[1024*10]; //缂傛挸鍟跨�圭懓娅�
+			int len = -1; //閹恒儲鏁归梹鍨
 			while((len=is.read(flush))!=-1) {
-				baos.write(flush,0,len);		 //鍐欏嚭鍒板瓧鑺傛暟缁勪腑			
+				baos.write(flush,0,len);		 //閸愭瑥鍤崚鏉跨摟閼哄倹鏆熺紒鍕厬			
 			}		
 			baos.flush();
 			return baos.toByteArray();
@@ -46,7 +46,7 @@ public class IOUtils {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}finally {
-			//4銆侀噴鏀捐祫婧�
+			//4閵嗕線鍣撮弨鎹愮カ濠э拷
 			try {
 				if(null!=is) {
 					is.close();
@@ -58,30 +58,30 @@ public class IOUtils {
 		return null;		
 	}
 	/**
-	 * 2銆佸瓧鑺傛暟缁勫啓鍑哄埌鍥剧墖
-	 * 1)銆佸瓧鑺傛暟缁勫埌绋嬪簭 ByteArrayInputStream
-	 * 2)銆佺▼搴忓埌鏂囦欢 FileOutputStream
+	 * 2閵嗕礁鐡ч懞鍌涙殶缂佸嫬鍟撻崙鍝勫煂閸ュ墽澧�
+	 * 1)閵嗕礁鐡ч懞鍌涙殶缂佸嫬鍩岀粙瀣碍 ByteArrayInputStream
+	 * 2)閵嗕胶鈻兼惔蹇撳煂閺傚洣娆� FileOutputStream
 	 */
 	public static void byteArrayToFile(byte[] src,String filePath) {
-		//1銆佸垱寤烘簮
+		//1閵嗕礁鍨卞鐑樼爱
 		File dest = new File(filePath);
-		//2銆侀�夋嫨娴�
+		//2閵嗕線锟藉瀚ㄥù锟�
 		InputStream  is =null;
 		OutputStream os =null;
 		try {
 			is =new ByteArrayInputStream(src);
 			os = new FileOutputStream(dest);
-			//3銆佹搷浣� (鍒嗘璇诲彇)
-			byte[] flush = new byte[5]; //缂撳啿瀹瑰櫒
-			int len = -1; //鎺ユ敹闀垮害
+			//3閵嗕焦鎼锋担锟� (閸掑棙顔岀拠璇插絿)
+			byte[] flush = new byte[5]; //缂傛挸鍟跨�圭懓娅�
+			int len = -1; //閹恒儲鏁归梹鍨
 			while((len=is.read(flush))!=-1) {
-				os.write(flush,0,len);			//鍐欏嚭鍒版枃浠�	
+				os.write(flush,0,len);			//閸愭瑥鍤崚鐗堟瀮娴狅拷	
 			}		
 			os.flush();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}finally {
-			//4銆侀噴鏀捐祫婧�
+			//4閵嗕線鍣撮弨鎹愮カ濠э拷
 			try {
 				if (null != os) {
 					os.close();

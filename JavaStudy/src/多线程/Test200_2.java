@@ -1,4 +1,4 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -7,7 +7,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 /**
- * Ä£Äâ¹êÍÃÈüÅÜ
+ * æ¨¡æ‹Ÿé¾Ÿå…”èµ›è·‘
  * @author jie
  *
  */
@@ -47,18 +47,18 @@ public class Test200_2 implements Callable<Integer>{
 	
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		Test200_2 racer=new Test200_2();
-		//´´½¨Ö´ĞĞ·şÎñ
+		//åˆ›å»ºæ‰§è¡ŒæœåŠ¡
 		ExecutorService es=Executors.newFixedThreadPool(2);
-		//Ìá½»Ö´ĞĞ
+		//æäº¤æ‰§è¡Œ
 		Future<Integer> result1=es.submit(racer);
 		Future<Integer> result2=es.submit(racer);
 
-		//»ñÈ¡½á¹û
+		//è·å–ç»“æœ
 		Integer r1=result1.get();
 		Integer r2=result2.get();
 	
 		System.out.println(r1+"__"+r2);
-		//¹Ø±Õ·şÎñ
+		//å…³é—­æœåŠ¡
 		es.shutdownNow();
 		
 

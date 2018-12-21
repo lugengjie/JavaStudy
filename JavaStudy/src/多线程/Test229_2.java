@@ -1,6 +1,6 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * ThreadLocalÃ¿¸öÏß³Ì×ÔÉíµÄÊý¾Ý£¬¸ü¸Ä²»»áÓ°ÏìÆäËûÏß³Ì
+ * ThreadLocalæ¯ä¸ªçº¿ç¨‹è‡ªèº«çš„æ•°æ®ï¼Œæ›´æ”¹ä¸ä¼šå½±å“å…¶ä»–çº¿ç¨‹
  * @author jie
  *
  */
@@ -16,9 +16,9 @@ public class Test229_2 {
 		@Override
 		public void run() {
 			Integer left=threadLocal.get();
-			System.out.println(Thread.currentThread().getName()+"µÃµ½ÁË->"+left);
+			System.out.println(Thread.currentThread().getName()+"å¾—åˆ°äº†->"+left);
 			threadLocal.set(left-1);
-			System.out.println(Thread.currentThread().getName()+"»¹Ê£ÏÂ->"+threadLocal.get());
+			System.out.println(Thread.currentThread().getName()+"è¿˜å‰©ä¸‹->"+threadLocal.get());
 			
 		}
 	}

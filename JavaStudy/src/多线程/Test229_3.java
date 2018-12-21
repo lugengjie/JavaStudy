@@ -1,7 +1,7 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * ThreadLocal·ÖÎöÉÏÏÂÎÄ»·¾³ Æðµã
- * ¹¹ÔìÆ÷£ºÄÄÀïµ÷ÓÃ£¬¾ÍÊôÓÚÄÄÀï
+ * ThreadLocalåˆ†æžä¸Šä¸‹æ–‡çŽ¯å¢ƒ èµ·ç‚¹
+ * æž„é€ å™¨ï¼šå“ªé‡Œè°ƒç”¨ï¼Œå°±å±žäºŽå“ªé‡Œ
  * @author jie
  *
  */

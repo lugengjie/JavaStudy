@@ -1,13 +1,13 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /**
- * ÖÕÖ¹Ïß³Ì
- * 1.Ïß³ÌÕı³£Ö´ĞĞÍê±Ï-->´ÎÊı
- * 2.Íâ²¿¸ÉÉæ--¡·¼ÓÈë±êÊ¶
- * ²»ÒªÊ¹ÓÃstop destory
+ * ç»ˆæ­¢çº¿ç¨‹
+ * 1.çº¿ç¨‹æ­£å¸¸æ‰§è¡Œå®Œæ¯•-->æ¬¡æ•°
+ * 2.å¤–éƒ¨å¹²æ¶‰--ã€‹åŠ å…¥æ ‡è¯†
+ * ä¸è¦ä½¿ç”¨stop destory
  * @author jie
  */
 public class Test204 implements Runnable{
-	//¼ÓÈë±êÊ¶£¬±êÊ¶Ïß³ÌÌåÊÇ·ñ¿ÉÒÔÔËĞĞ
+	//åŠ å…¥æ ‡è¯†ï¼Œæ ‡è¯†çº¿ç¨‹ä½“æ˜¯å¦å¯ä»¥è¿è¡Œ
 	private boolean flag=true;
 	private String name;
 	
@@ -16,19 +16,19 @@ public class Test204 implements Runnable{
 	}
 	@Override
 	public void run() {
-		//¹ØÁª±êÊ¶£¬true-->ÔËĞĞ flase-->ÔİÍ£
+		//å…³è”æ ‡è¯†ï¼Œtrue-->è¿è¡Œ flase-->æš‚åœ
 		int i=0;
 		while(flag) {
 			System.out.println(name+"-->"+i++);
 		}
 	}
-	//¶ÔÍâÌá¹©¸Ä±ä±êÊ¶µÄ·½·¨
+	//å¯¹å¤–æä¾›æ”¹å˜æ ‡è¯†çš„æ–¹æ³•
 	private void terminate() {
 		this.flag=false;
 
 	}
 	public static void main(String[] args) {
-		Test204 tt=new Test204("Ğ¡Ğ¡");
+		Test204 tt=new Test204("å°å°");
 		new Thread(tt).start();
 		for(int i=0;i<99;i++) {
 			if(88==i) {

@@ -1,4 +1,4 @@
-package ÍøÂç±à³Ì.Test246;
+package ç½‘ç»œç¼–ç¨‹.Test246;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -7,27 +7,27 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * ÔÚÏßÁÄÌìÊÒ£º·şÎñÆ÷
- * Ä¿±ê£ºÊµÏÖÒ»¸ö¿Í»§¿ÉÒÔÕı³£ÊÕ·¢ÏûÏ¢
+ * åœ¨çº¿èŠå¤©å®¤ï¼šæœåŠ¡å™¨
+ * ç›®æ ‡ï¼šå®ç°ä¸€ä¸ªå®¢æˆ·å¯ä»¥æ­£å¸¸æ”¶å‘æ¶ˆæ¯
  * @author jie
  *
  */
 public class Chat {
 	public static void main(String[] args) throws IOException {
 		System.out.println("------Service------");
-		// * 1.Ö¸¶¨¶Ë¿Ú Ê¹ÓÃServiceSocket´´½¨·şÎñÆ÷
+		// * 1.æŒ‡å®šç«¯å£ ä½¿ç”¨ServiceSocketåˆ›å»ºæœåŠ¡å™¨
 		ServerSocket server=new ServerSocket(8888);
-		// * 2.×èÈûÊ½µÈ´ıÁ¬½Ó accept
+		// * 2.é˜»å¡å¼ç­‰å¾…è¿æ¥ accept
 		Socket client=server.accept();
-		System.out.println("Ò»¸ö¿Í»§¶Ë½¨Á¢Á¬½Ó");
-		//3.½ÓÊÕÏûÏ¢
+		System.out.println("ä¸€ä¸ªå®¢æˆ·ç«¯å»ºç«‹è¿æ¥");
+		//3.æ¥æ”¶æ¶ˆæ¯
 		DataInputStream dis=new DataInputStream(client.getInputStream());
 		String msg=dis.readUTF();
-		//4.·µ»ØÏûÏ¢
+		//4.è¿”å›æ¶ˆæ¯
 		DataOutputStream dos=new DataOutputStream(client.getOutputStream());
 		dos.writeUTF(msg);
 		dos.flush();
-		//5.ÊÍ·Å×ÊÔ´
+		//5.é‡Šæ”¾èµ„æº
 		dis.close();
 		dos.close();
 		client.close();
