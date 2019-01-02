@@ -1,4 +1,4 @@
-package 鎵嬪啓Httpserver椤圭洰.Test256;
+package 手写Httpserver项目.Test256;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -13,8 +13,8 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import 鎵嬪啓Httpserver椤圭洰.Test255.Entity;
-import 鎵嬪啓Httpserver椤圭洰.Test255.Mapping;
+import 手写Httpserver项目.Test255.Entity;
+import 手写Httpserver项目.Test255.Mapping;
 
 public class XmlParse {
 	public static void main(String[] args) throws SAXException, IOException, ParserConfigurationException, ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {

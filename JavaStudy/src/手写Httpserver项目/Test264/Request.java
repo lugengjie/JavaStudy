@@ -1,7 +1,8 @@
-package 手写Httpserver项目.Test263;
+package 手写Httpserver项目.Test264;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -75,6 +76,8 @@ public class Request {
 		queryStr=null==queryStr?"":queryStr;
 		System.out.println(method+"-->"+url+"-->"+queryStr);
 		//转成Map
+		convertMap();
+		
 	}
 	//处理请求参数为Map
 	private void convertMap() {
@@ -83,10 +86,11 @@ public class Request {
 		for(String queryStr:keyValues) {
 			//2.再次分割字符串=
 			String[] kv=queryStr.split("=");
+			//保证永远有两个值
 			kv=Arrays.copyOf(kv,2);
 			//获取key和value
 			String key=kv[0];
-			String value=kv[1];
+			String value=(kv[1]==null?null:decode(kv[1],"utf-8"));
 			//存储到map中
 			if(!parameterMap.containsKey(key)) {//第一次
 				parameterMap.put(key,new ArrayList<String>());
@@ -94,6 +98,49 @@ public class Request {
 			parameterMap.get(key).add(value);
 		}
 	}
-	getParameterValues
+	/**
+	 * 通过key获取对应的多个值
+	 * @param key
+	 * @return
+	 */
+	public String[] getParameterValues(String key) {
+		List<String> values=this.parameterMap.get(key);
+		if(null==values||values.size()<1) {
+			return null;
+		}
+		return values.toArray(new String[0]);
+	}
+	/**
+	 * 处理中文
+	 * @param value
+	 * @param enc
+	 * @return
+	 */
+	private String decode(String value,String enc) {
+		try {
+			return java.net.URLDecoder.decode(value, enc);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	/**
+	 * 通过key获取对应的一个值
+	 * @param key
+	 * @return
+	 */
+	public String getParameterValue(String key) {
+		String[] values=getParameterValues(key);
+		return null==values?null:values[0];
+	}
 	
+	public String getRequestInfo() {
+		return requestInfo;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public String getQueryStr() {
+		return queryStr;
+	}
 } 

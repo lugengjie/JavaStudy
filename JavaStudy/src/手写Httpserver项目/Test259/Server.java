@@ -1,4 +1,4 @@
-package ÊÖÐ´HttpserverÏîÄ¿.Test259;
+package æ‰‹å†™Httpserveré¡¹ç›®.Test259;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -6,7 +6,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * Ê¹ÓÃServerSocket½¨Á¢Óëä¯ÀÀÆ÷µÄÁ¬½Ó£¬»ñÈ¡ÇëÇóÐ­Òé
+ * Ê¹ï¿½ï¿½ServerSocketï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ð­ï¿½ï¿½
  * @author jie
  *
  */
@@ -16,23 +16,23 @@ public class Server {
 		Server server=new Server();
 		server.start();
 	}
-	//Æô¶¯·þÎñ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public void start() {
 		try {
 			serverSocket=new ServerSocket(8888);
 			receive();
 		} catch (IOException e) {
-			System.out.println("·þÎñÆ÷Æô¶¯Ê§°Ü");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½");
 			e.printStackTrace();
 		}
 
 	}
-	//½ÓÊÕÁ¬½Ó
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public  void receive() {
 	    try {
 			Socket client=serverSocket.accept();
-			System.out.println("Ò»¸ö¿Í»§¶Ë½¨Á¢Á¬½Ó");
-			//»ñÈ¡ÇëÇóÐ­Òé
+			System.out.println("Ò»ï¿½ï¿½ï¿½Í»ï¿½ï¿½Ë½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+			//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ð­ï¿½ï¿½
 			InputStream is=client.getInputStream();
 			byte[] datas=new byte[1024*1024];
 			int len=is.read(datas);
@@ -40,11 +40,11 @@ public class Server {
 			System.out.println(requestInfo);
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.out.println("¿Í»§¶Ë´íÎó");
+			System.out.println("ï¿½Í»ï¿½ï¿½Ë´ï¿½ï¿½ï¿½");
 		}
 
 	}
-	//Í£Ö¹·þÎñ
+	//Í£Ö¹ï¿½ï¿½ï¿½ï¿½
 	public void stop() {
 		// TODO Auto-generated method stub
 
